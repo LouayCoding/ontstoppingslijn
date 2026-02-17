@@ -1,0 +1,36 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { PHONE_HREF } from "@/lib/constants";
+
+export default function StickyCTA() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 500);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <div
+      className={`md:hidden fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-t border-divider px-4 py-3 flex gap-3 transition-transform duration-300 ${
+        visible ? "translate-y-0" : "translate-y-full"
+      }`}
+    >
+      <a
+        href={PHONE_HREF}
+        className="flex-1 text-center bg-accent text-foreground font-medium text-sm py-3 rounded hover:bg-accent-hover transition-colors"
+      >
+        Bel direct
+      </a>
+      <Link
+        href="/afspraak"
+        className="flex-1 text-center border border-divider text-foreground font-medium text-sm py-3 rounded hover:border-muted transition-colors"
+      >
+        Afspraak maken
+      </Link>
+    </div>
+  );
+}
