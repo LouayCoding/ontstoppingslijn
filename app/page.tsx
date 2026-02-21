@@ -4,6 +4,7 @@ import ServicesGrid from "@/components/sections/ServicesGrid";
 import HowItWorks from "@/components/sections/HowItWorks";
 import PricingTeaser from "@/components/sections/PricingTeaser";
 import Werkgebied from "@/components/sections/Werkgebied";
+import Reviews from "@/components/sections/Reviews";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <HowItWorks />
       <PricingTeaser />
       <Werkgebied />
+      <Reviews />
       <FAQ />
       <FinalCTA />
     </>

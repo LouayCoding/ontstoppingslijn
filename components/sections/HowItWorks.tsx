@@ -22,7 +22,7 @@ const STEPS = [
     number: "03",
     title: "Klaar en veilig",
     description:
-      "Uw schoorsteen is weer schoon en veilig. U ontvangt een bewijs van onderhoud voor uw verzekering.",
+      "Uw schoorsteen of luchtkanaal is weer schoon en veilig. U ontvangt een bewijs van onderhoud voor uw verzekering.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function HowItWorks() {
             className="relative aspect-[4/5] overflow-hidden rounded order-2 lg:order-1"
           >
             <Image
-              src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=800&q=80"
+              src="/camera-inspectie.png"
               alt="Schoorsteenveger aan het werk"
               fill
               className="object-cover"

@@ -60,7 +60,7 @@ export default function OverOnsPage() {
             className="relative aspect-[4/5] overflow-hidden rounded"
           >
             <Image
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+              src="/dak-inspectie.png"
               alt="Vakman op het dak"
               fill
               className="object-cover"
@@ -77,7 +77,7 @@ export default function OverOnsPage() {
           className="relative aspect-[21/9] overflow-hidden rounded mb-20"
         >
           <Image
-            src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1400&q=80"
+            src="/schoorsteenkap-plaatsen.png"
             alt="Nederlandse huizen met schoorstenen"
             fill
             className="object-cover"

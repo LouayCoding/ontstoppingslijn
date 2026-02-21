@@ -63,7 +63,7 @@ export default function ContactPage() {
             <p className="text-xl font-heading font-semibold group-hover:text-accent transition-colors">
               {PHONE_NUMBER}
             </p>
-            <p className="text-sm text-muted mt-2">Ma–Za, 08:00–20:00</p>
+            <p className="text-sm text-muted mt-2">Ma–Vr, 08:00–18:00</p>
           </motion.a>
 
           <motion.a

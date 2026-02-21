@@ -12,7 +12,7 @@ export default function FinalCTA() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1600&q=80)",
+            "url(/daklekkage-repareren.png)",
         }}
       />
       <div className="absolute inset-0 bg-[#141414]/85" />

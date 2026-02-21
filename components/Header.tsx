@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { PHONE_NUMBER, PHONE_HREF, COMPANY_NAME, NAV_LINKS } from "@/lib/constants";
 import { useTheme } from "@/components/ThemeProvider";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 function SunIcon() {
   return (
@@ -82,6 +83,7 @@ export default function Header() {
           >
             {theme === "dark" ? <SunIcon /> : <MoonIcon />}
           </button>
+          <LanguageSwitcher />
           <a
             href={PHONE_HREF}
             className="text-sm font-medium text-foreground tracking-wide"
@@ -97,6 +99,7 @@ export default function Header() {
         </div>
 
         <div className="md:hidden flex items-center gap-3">
+          <LanguageSwitcher iconOnly />
           <button
             onClick={toggle}
             aria-label="Wissel thema"
@@ -144,6 +147,7 @@ export default function Header() {
                 </Link>
               ))}
               <div className="mt-8 pt-8 border-t border-divider flex flex-col gap-4">
+                <LanguageSwitcher />
                 <a href={PHONE_HREF} className="text-lg font-medium text-accent">
                   {PHONE_NUMBER}
                 </a>

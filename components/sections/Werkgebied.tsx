@@ -68,7 +68,7 @@ export default function Werkgebied() {
             className="relative aspect-[4/3] overflow-hidden rounded"
           >
             <Image
-              src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=800&q=80"
+              src="/vogelnest-verwijderen.png"
               alt="Nederlandse daken en schoorstenen"
               fill
               className="object-cover"

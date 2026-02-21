@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
@@ -22,7 +23,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Schoorsteenservice | Schoorsteen Vegen & Inspectie",
   description:
-    "Professionele schoorsteenservice door heel Nederland. Schoorsteen vegen vanaf €39,50. Bel direct: 085 060 47 XX.",
+    "Professionele schoorsteen-, luchtkanaal- en ventilatieservice door heel Nederland. Schoorsteen vegen vanaf €39,50. Bel direct: 085 060 47 XX.",
 };
 
 export default function RootLayout({
@@ -39,6 +40,7 @@ export default function RootLayout({
           <Footer />
           <StickyCTA />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

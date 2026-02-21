@@ -11,7 +11,7 @@ export default function Footer() {
               {COMPANY_NAME}
             </p>
             <p className="text-sm text-muted leading-relaxed max-w-[280px]">
-              Professionele schoorsteenservice door heel Nederland. Vakkundig, snel en eerlijk geprijsd.
+              Professionele schoorsteen-, luchtkanaal- en ventilatieservice door heel Nederland. Vakkundig, snel en eerlijk geprijsd.
             </p>
           </div>
 
