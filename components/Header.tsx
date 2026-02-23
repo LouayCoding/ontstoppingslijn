@@ -100,18 +100,18 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="md:hidden flex items-center gap-3">
+        <div className="md:hidden flex items-center gap-1">
           <LanguageSwitcher iconOnly />
           <button
             onClick={toggle}
             aria-label="Wissel thema"
-            className="w-8 h-8 flex items-center justify-center text-muted hover:text-foreground transition-colors"
+            className="w-11 h-11 flex items-center justify-center text-muted hover:text-foreground transition-colors"
           >
             {theme === "dark" ? <SunIcon /> : <MoonIcon />}
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="relative w-8 h-8 flex flex-col justify-center items-center gap-1.5"
+            className="relative w-11 h-11 flex flex-col justify-center items-center gap-1.5"
             aria-label="Menu"
           >
             <span
@@ -135,7 +135,8 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden fixed inset-0 top-16 bg-background z-40"
+            className="md:hidden fixed inset-0 top-16 bg-background z-40 overflow-y-auto"
+            style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
           >
             <nav className="flex flex-col px-6 pt-8 gap-1">
               {NAV_LINKS.map((link) => (

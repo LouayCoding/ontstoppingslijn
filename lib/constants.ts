@@ -18,7 +18,7 @@ export const SERVICES = [
     title: "Schoorsteen vegen",
     price: "39,50",
     description: "Professioneel vegen van uw schoorsteen voor optimale trek en brandveiligheid.",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80",
+    image: "/heropc.png",
     details: [
       { label: "1 kanaal", price: "€39,50" },
       { label: "Meerdere kanalen", price: "€25 per kanaal" },

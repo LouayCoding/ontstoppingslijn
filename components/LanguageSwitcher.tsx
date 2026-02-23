@@ -19,7 +19,7 @@ export default function LanguageSwitcher({ iconOnly = false }: { iconOnly?: bool
       <button
         onClick={() => setLocale(nextLocale)}
         aria-label={`Switch to ${labels[nextLocale]}`}
-        className="w-8 h-8 flex items-center justify-center hover:opacity-70 transition-opacity duration-200"
+        className="w-11 h-11 flex items-center justify-center hover:opacity-70 transition-opacity duration-200"
       >
         {locale === "nl" ? (
           <img src="https://flagcdn.com/w40/nl.png" alt="NL" width={20} height={15} className="rounded-sm" />

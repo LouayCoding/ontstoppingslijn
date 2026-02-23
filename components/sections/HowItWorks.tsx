@@ -21,6 +21,7 @@ export default function HowItWorks() {
             viewport={viewportConfig}
             variants={fadeUp}
             className="relative aspect-[4/5] overflow-hidden rounded order-2 lg:order-1"
+            style={{ position: 'relative' }}
           >
             <Image
               src="/camera-inspectie.png"

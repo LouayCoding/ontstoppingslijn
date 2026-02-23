@@ -78,7 +78,7 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
           </motion.div>
         </div>
 
-        <motion.div variants={item} className="relative aspect-[4/3] overflow-hidden rounded">
+        <motion.div variants={item} className="relative aspect-[4/3] overflow-hidden rounded" style={{ position: 'relative' }}>
           <Image
             src={service.image}
             alt={service.title}

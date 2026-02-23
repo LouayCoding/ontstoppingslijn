@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-divider flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-16 pt-8 border-t border-divider flex flex-col md:flex-row items-center justify-between gap-4 pb-20 md:pb-0">
           <p className="text-xs text-muted">
             © {new Date().getFullYear()} {COMPANY_NAME}. {t("footer.rights")}
           </p>

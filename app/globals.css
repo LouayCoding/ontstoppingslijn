@@ -25,6 +25,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -35,6 +36,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   transition: background 0.3s ease, color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 ::selection {
@@ -54,9 +57,31 @@ a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* iOS: prevent overscroll bounce showing white background */
+@supports (padding: env(safe-area-inset-bottom)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* iOS: fix sticky/fixed positioning with keyboard */
+@supports (-webkit-touch-callout: none) {
+  .fixed {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }

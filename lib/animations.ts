@@ -47,6 +47,5 @@ export const scaleIn = {
 
 export const viewportConfig = {
   once: true,
-  amount: 0.2,
-  margin: "-50px",
+  amount: 0.05,
 };

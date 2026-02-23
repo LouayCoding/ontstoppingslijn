@@ -68,6 +68,7 @@ export default function Werkgebied() {
             viewport={viewportConfig}
             variants={fadeUp}
             className="relative aspect-[4/3] overflow-hidden rounded"
+            style={{ position: 'relative' }}
           >
             <Image
               src="/vogelnest-verwijderen.png"

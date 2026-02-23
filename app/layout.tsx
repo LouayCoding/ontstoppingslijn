@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
 import ThemeProvider from "@/components/ThemeProvider";
 import { I18nProvider } from "@/lib/i18n-context";
+import DebugConsole from "@/components/DebugConsole";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -20,6 +21,14 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: "Schoorsteenservice | Schoorsteen Vegen & Inspectie",
@@ -41,6 +50,7 @@ export default function RootLayout({
             <main>{children}</main>
             <Footer />
             <StickyCTA />
+            <DebugConsole />
           </I18nProvider>
         </ThemeProvider>
         <Analytics />

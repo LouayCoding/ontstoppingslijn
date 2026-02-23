@@ -29,6 +29,7 @@ export default function AfspraakPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,9 +47,14 @@ export default function AfspraakPage() {
         setSubmitStatus("success");
         setFormData({ naam: "", email: "", telefoon: "", postcode: "", huisnummer: "", opmerking: "" });
       } else {
+        const data = await response.json().catch(() => null);
+        console.error("Form submission failed:", response.status, data);
+        setErrorMessage(data?.error || `Server error (${response.status})`);
         setSubmitStatus("error");
       }
-    } catch {
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setErrorMessage(err instanceof Error ? err.message : "Netwerkfout");
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -121,13 +127,13 @@ export default function AfspraakPage() {
           >
             <form
               onSubmit={handleSubmit}
-              className="bg-surface/80 backdrop-blur-md rounded-lg p-6 md:p-8 flex flex-col gap-5"
+              className="bg-surface/80 backdrop-blur-md rounded-lg p-5 md:p-8 flex flex-col gap-4 md:gap-5"
             >
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-accent font-medium mb-1">
                   {t("appointment.eyebrow")}
                 </p>
-                <h2 className="text-xl font-heading font-semibold mb-2">
+                <h2 className="text-lg md:text-xl font-heading font-semibold mb-2">
                   {t("appointment.title")}
                 </h2>
                 <p className="text-sm text-muted leading-relaxed">
@@ -146,7 +152,7 @@ export default function AfspraakPage() {
                   required
                   value={formData.naam}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                  className="w-full px-4 py-3.5 md:py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-base md:text-sm"
                   placeholder={t("appointment.form.placeholders.name")}
                 />
               </div>
@@ -162,7 +168,7 @@ export default function AfspraakPage() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                  className="w-full px-4 py-3.5 md:py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-base md:text-sm"
                   placeholder={t("appointment.form.placeholders.email")}
                 />
               </div>
@@ -178,7 +184,7 @@ export default function AfspraakPage() {
                   required
                   value={formData.telefoon}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                  className="w-full px-4 py-3.5 md:py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-base md:text-sm"
                   placeholder={t("appointment.form.placeholders.phone")}
                 />
               </div>
@@ -195,7 +201,7 @@ export default function AfspraakPage() {
                     required
                     value={formData.postcode}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                    className="w-full px-4 py-3.5 md:py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-base md:text-sm"
                     placeholder={t("appointment.form.placeholders.postalCode")}
                   />
                 </div>
@@ -210,7 +216,7 @@ export default function AfspraakPage() {
                     required
                     value={formData.huisnummer}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                    className="w-full px-4 py-3.5 md:py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-base md:text-sm"
                     placeholder={t("appointment.form.placeholders.houseNumber")}
                   />
                 </div>
@@ -226,7 +232,7 @@ export default function AfspraakPage() {
                   rows={3}
                   value={formData.opmerking}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm resize-none"
+                  className="w-full px-4 py-3.5 md:py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-base md:text-sm resize-none"
                   placeholder={t("appointment.form.placeholders.remark")}
                 />
               </div>
@@ -234,15 +240,20 @@ export default function AfspraakPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-accent text-foreground font-medium text-sm px-6 py-3.5 rounded hover:bg-accent-hover transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-accent text-foreground font-medium text-base md:text-sm px-6 py-4 md:py-3.5 rounded hover:bg-accent-hover transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? t("appointment.form.submitting") : t("appointment.form.submit")}
               </button>
 
               {submitStatus === "error" && (
-                <p className="text-sm text-red-500 text-center">
-                  {t("appointment.form.error")}
-                </p>
+                <div className="text-center">
+                  <p className="text-sm text-red-500">
+                    {t("appointment.form.error")}
+                  </p>
+                  {errorMessage && (
+                    <p className="text-xs text-red-400 mt-1">{errorMessage}</p>
+                  )}
+                </div>
               )}
               {submitStatus === "idle" && (
                 <p className="text-xs text-muted text-center">

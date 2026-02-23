@@ -58,6 +58,7 @@ export default function OverOnsPage() {
             viewport={viewportConfig}
             variants={fadeUp}
             className="relative aspect-[4/5] overflow-hidden rounded"
+            style={{ position: 'relative' }}
           >
             <Image
               src="/dak-inspectie.png"
@@ -75,6 +76,7 @@ export default function OverOnsPage() {
           viewport={viewportConfig}
           variants={fadeUp}
           className="relative aspect-[21/9] overflow-hidden rounded mb-20"
+          style={{ position: 'relative' }}
         >
           <Image
             src="/schoorsteenkap-plaatsen.png"
