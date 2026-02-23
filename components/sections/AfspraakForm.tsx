@@ -56,7 +56,7 @@ export default function AfspraakForm() {
 
   return (
     <section className="py-20 md:py-28 border-t border-divider">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <SectionHeader
           eyebrow="Direct plannen"
           title="Maak een afspraak."

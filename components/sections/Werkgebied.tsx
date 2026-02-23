@@ -6,17 +6,19 @@ import { motion } from "framer-motion";
 import { fadeUp, staggerItem, viewportConfig } from "@/lib/animations";
 import { TOP_CITIES } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
+import { useTranslation } from "@/lib/i18n-context";
 
 export default function Werkgebied() {
+  const { t } = useTranslation();
   return (
     <section className="py-20 md:py-28 border-t border-divider">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div>
             <SectionHeader
-              eyebrow="Werkgebied"
-              title="Actief door heel Nederland."
-              subtitle="Ons netwerk van vakmensen bestrijkt het hele land. Van Groningen tot Maastricht."
+              eyebrow={t("werkgebied.eyebrow")}
+              title={t("werkgebied.title")}
+              subtitle={t("werkgebied.subtitle")}
               align="left"
             />
 
@@ -41,7 +43,7 @@ export default function Werkgebied() {
                 </motion.div>
               ))}
               <motion.p variants={staggerItem} className="col-span-2 text-sm text-muted/60 mt-2">
-                + omliggende plaatsen
+                {t("werkgebied.surrounding")}
               </motion.p>
             </motion.div>
 
@@ -55,7 +57,7 @@ export default function Werkgebied() {
                 href="/werkgebied"
                 className="inline-flex items-center text-sm text-muted hover:text-foreground transition-colors duration-200"
               >
-                Bekijk alle plaatsen →
+                {t("werkgebied.viewAll")}
               </Link>
             </motion.div>
           </div>

@@ -9,7 +9,7 @@ import SectionHeader from "@/components/SectionHeader";
 export default function TarievenPage() {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <SectionHeader
           eyebrow="Tarieven"
           title="Heldere prijzen, geen verrassingen."

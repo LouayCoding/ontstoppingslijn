@@ -1,6 +1,6 @@
 export const PHONE_NUMBER = "085 060 47 02";
-export const PHONE_HREF = "tel:085060470";
-export const EMAIL = "info@schoorsteenservice.nl";
+export const PHONE_HREF = "tel:0850604702";
+export const EMAIL = "info@directschoorsteenvegen.nl";
 export const COMPANY_NAME = "Schoorsteenservice";
 
 export const NAV_LINKS = [

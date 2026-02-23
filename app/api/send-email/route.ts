@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
-    const { naam, email, telefoon, postcode, huisnummer } = await req.json();
+    const { naam, email, telefoon, postcode, huisnummer, opmerking } = await req.json();
 
     const port = Number(process.env.SMTP_PORT) || 587;
     const isSecure = port === 465;
@@ -40,6 +40,7 @@ export async function POST(req: NextRequest) {
             <p><strong>Telefoon:</strong> ${telefoon}</p>
             <p><strong>Postcode:</strong> ${postcode}</p>
             <p><strong>Huisnummer:</strong> ${huisnummer}</p>
+            ${opmerking ? `<p><strong>Opmerking:</strong> ${opmerking}</p>` : ""}
           </div>
           
           <p style="color: #666; font-size: 14px;">
@@ -56,6 +57,7 @@ Email: ${email}
 Telefoon: ${telefoon}
 Postcode: ${postcode}
 Huisnummer: ${huisnummer}
+${opmerking ? `Opmerking: ${opmerking}` : ""}
 
 Neem binnen 24 uur contact op met de klant.
       `,

@@ -13,7 +13,7 @@ const STATS = [
 export default function TrustStrip() {
   return (
     <section className="border-y border-divider">
-      <div className="mx-auto max-w-[1200px] px-6 py-10 md:py-12">
+      <div className="mx-auto max-w-[1400px] px-6 py-10 md:py-12">
         <motion.div
           initial="hidden"
           whileInView="visible"

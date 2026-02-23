@@ -20,7 +20,7 @@ const item = {
 export default function OverOnsPage() {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-20">
           <motion.div variants={container} initial="hidden" animate="visible">
             <motion.span

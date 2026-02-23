@@ -11,7 +11,7 @@ const FEATURED = SERVICES.slice(0, 3);
 export default function PricingTeaser() {
   return (
     <section className="py-20 md:py-28">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <SectionHeader
           eyebrow="Tarieven"
           title="Heldere prijzen, geen verrassingen."

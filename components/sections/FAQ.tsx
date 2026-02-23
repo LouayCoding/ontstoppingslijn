@@ -5,16 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, viewportConfig } from "@/lib/animations";
 import { FAQ_ITEMS } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
+import { useTranslation } from "@/lib/i18n-context";
 
 export default function FAQ() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-[720px] px-6">
         <SectionHeader
-          eyebrow="Veelgestelde vragen"
-          title="Direct antwoord op uw vragen."
+          eyebrow={t("faq.eyebrow")}
+          title={t("faq.title")}
         />
 
         <motion.div

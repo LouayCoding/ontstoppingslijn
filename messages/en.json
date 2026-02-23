@@ -63,6 +63,7 @@
       "phone": "Phone number",
       "postalCode": "Postal code",
       "houseNumber": "House number",
+      "remark": "Remarks (optional)",
       "submit": "Request appointment",
       "submitting": "Sending...",
       "success": "✓ Thank you! We will contact you within 24 hours.",
@@ -74,7 +75,8 @@
         "email": "your@email.com",
         "phone": "06 12345678",
         "postalCode": "1234 AB",
-        "houseNumber": "123"
+        "houseNumber": "123",
+        "remark": "E.g. preferred date, special requests..."
       }
     }
   },

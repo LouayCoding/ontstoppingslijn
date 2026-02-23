@@ -31,7 +31,7 @@ export default async function ServiceDetailPage({
 
   return (
     <article className="pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <ServiceDetailClient service={service} />
 
         <div className="mt-20 pt-16 border-t border-divider">

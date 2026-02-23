@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { PHONE_NUMBER, PHONE_HREF, COMPANY_NAME, NAV_LINKS } from "@/lib/constants";
 import { useTheme } from "@/components/ThemeProvider";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslation } from "@/lib/i18n-context";
 
 function SunIcon() {
   return (
@@ -35,6 +36,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, toggle } = useTheme();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -58,7 +60,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-[1200px] px-6 flex items-center justify-between h-16 md:h-20">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20 flex items-center justify-between h-16 md:h-20">
         <Link href="/" className="font-heading text-lg font-semibold tracking-tight">
           {COMPANY_NAME}
         </Link>
@@ -94,7 +96,7 @@ export default function Header() {
             href="/afspraak"
             className="text-sm font-medium bg-accent text-foreground px-5 py-2.5 rounded hover:bg-accent-hover transition-colors duration-200"
           >
-            Afspraak maken
+            {t("hero.appointmentButton")}
           </Link>
         </div>
 
@@ -156,7 +158,7 @@ export default function Header() {
                   onClick={() => setMenuOpen(false)}
                   className="text-center bg-accent text-foreground font-medium px-6 py-3 rounded hover:bg-accent-hover transition-colors"
                 >
-                  Afspraak maken
+                  {t("hero.appointmentButton")}
                 </Link>
               </div>
             </nav>

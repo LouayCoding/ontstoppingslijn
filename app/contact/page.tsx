@@ -19,7 +19,7 @@ const item = {
 export default function ContactPage() {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <motion.div
           variants={container}
           initial="hidden"

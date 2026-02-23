@@ -36,7 +36,7 @@ export default function NotFound() {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="relative z-0 mx-auto max-w-[1200px] w-full px-6 py-32 md:py-40 text-center"
+        className="relative z-0 mx-auto max-w-[1400px] w-full px-6 py-32 md:py-40 text-center"
       >
         <motion.span
           variants={item}

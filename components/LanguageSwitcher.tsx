@@ -1,40 +1,23 @@
 "use client";
 
-import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useTranslation, type Locale } from "@/lib/i18n-context";
 
-const LOCALES = ["nl", "en"] as const;
+const LOCALES: Locale[] = ["nl", "en"];
 
-const flags: Record<string, string> = {
-  nl: "🇳🇱",
-  en: "🇬🇧",
-};
-
-const labels: Record<string, string> = {
+const labels: Record<Locale, string> = {
   nl: "NL",
   en: "EN",
 };
 
 export default function LanguageSwitcher({ iconOnly = false }: { iconOnly?: boolean }) {
-  const router = useRouter();
-  const pathname = usePathname();
+  const { locale, setLocale } = useTranslation();
 
-  const detected = LOCALES.find((l) => pathname.startsWith(`/${l}`)) || "nl";
-  const [locale, setLocale] = useState(detected);
-
-  const switchLocale = (newLocale: typeof LOCALES[number]) => {
-    setLocale(newLocale);
-    const stripped = pathname.replace(/^\/(nl|en)/, "") || "/";
-    const newPath = newLocale === "nl" ? stripped : `/${newLocale}${stripped}`;
-    router.push(newPath);
-  };
-
-  const nextLocale = locale === "nl" ? "en" : "nl" as typeof LOCALES[number];
+  const nextLocale: Locale = locale === "nl" ? "en" : "nl";
 
   if (iconOnly) {
     return (
       <button
-        onClick={() => switchLocale(nextLocale)}
+        onClick={() => setLocale(nextLocale)}
         aria-label={`Switch to ${labels[nextLocale]}`}
         className="w-8 h-8 flex items-center justify-center hover:opacity-70 transition-opacity duration-200"
       >
@@ -52,7 +35,7 @@ export default function LanguageSwitcher({ iconOnly = false }: { iconOnly?: bool
       {LOCALES.map((loc) => (
         <button
           key={loc}
-          onClick={() => switchLocale(loc)}
+          onClick={() => setLocale(loc)}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-sm font-medium transition-colors duration-200 ${
             locale === loc
               ? "bg-accent text-foreground"
@@ -60,7 +43,13 @@ export default function LanguageSwitcher({ iconOnly = false }: { iconOnly?: bool
           }`}
           aria-label={`Switch to ${labels[loc]}`}
         >
-          <span className="text-base">{flags[loc]}</span>
+          <img
+            src={`https://flagcdn.com/w40/${loc === "en" ? "gb" : loc}.png`}
+            alt={labels[loc]}
+            width={16}
+            height={12}
+            className="rounded-sm"
+          />
           <span>{labels[loc]}</span>
         </button>
       ))}

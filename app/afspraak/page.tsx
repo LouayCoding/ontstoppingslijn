@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { PHONE_NUMBER, PHONE_HREF, SERVICES } from "@/lib/constants";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n-context";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
@@ -17,31 +18,65 @@ const item = {
 };
 
 export default function AfspraakPage() {
-  const [submitted, setSubmitted] = useState(false);
+  const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    naam: "",
+    email: "",
+    telefoon: "",
+    postcode: "",
+    huisnummer: "",
+    opmerking: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-  }
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
 
-  if (submitted) {
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ naam: "", email: "", telefoon: "", postcode: "", huisnummer: "", opmerking: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  if (submitStatus === "success") {
     return (
       <section className="pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="mx-auto max-w-[600px] px-6 text-center">
           <span className="inline-block text-xs uppercase tracking-[0.2em] text-accent font-medium mb-4">
-            Verstuurd
+            {t("appointment.form.success").replace("✓ ", "")}
           </span>
           <h1 className="text-3xl md:text-4xl font-heading font-semibold mb-4">
-            Bedankt voor uw aanvraag.
+            {t("appointment.title")}
           </h1>
           <p className="text-muted text-base mb-8">
-            Wij nemen zo snel mogelijk contact met u op. Gemiddeld binnen 2 uur.
+            {t("appointment.form.info")}
           </p>
           <a
             href={PHONE_HREF}
             className="inline-flex items-center justify-center bg-accent text-foreground font-medium text-sm px-6 py-3 rounded hover:bg-accent-hover transition-colors"
           >
-            Of bel direct: {PHONE_NUMBER}
+            {t("hero.callButton", { phone: PHONE_NUMBER })}
           </a>
         </div>
       </section>
@@ -50,24 +85,24 @@ export default function AfspraakPage() {
 
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="mx-auto max-w-[1200px] px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
+      <div className="mx-auto max-w-[1400px] px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
+          {/* Left: Info */}
           <motion.div variants={container} initial="hidden" animate="visible">
             <motion.span
               variants={item}
               className="inline-block text-xs uppercase tracking-[0.2em] text-accent font-medium mb-4"
             >
-              Afspraak maken
+              {t("appointment.eyebrow")}
             </motion.span>
             <motion.h1
               variants={item}
               className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold mb-6"
             >
-              Plan uw afspraak.
+              {t("appointment.title")}
             </motion.h1>
             <motion.p variants={item} className="text-muted text-base mb-8 max-w-[40ch]">
-              Vul het formulier in en wij nemen binnen 24 uur contact met u op.
-              Liever direct? Bel ons.
+              {t("appointment.subtitle")}
             </motion.p>
             <motion.a
               variants={item}
@@ -78,70 +113,144 @@ export default function AfspraakPage() {
             </motion.a>
           </motion.div>
 
-          <motion.form
-            onSubmit={handleSubmit}
-            variants={container}
-            initial="hidden"
-            animate="visible"
-            className="flex flex-col gap-5"
+          {/* Right: Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease }}
           >
-            <motion.div variants={item}>
-              <label className="block text-sm text-muted mb-2">Naam</label>
-              <input
-                type="text"
-                required
-                className="w-full bg-transparent border border-divider rounded px-4 py-3 text-foreground text-base focus:border-accent focus:outline-none transition-colors"
-                placeholder="Uw volledige naam"
-              />
-            </motion.div>
-            <motion.div variants={item}>
-              <label className="block text-sm text-muted mb-2">Telefoon</label>
-              <input
-                type="tel"
-                required
-                className="w-full bg-transparent border border-divider rounded px-4 py-3 text-foreground text-base focus:border-accent focus:outline-none transition-colors"
-                placeholder="06 1234 5678"
-              />
-            </motion.div>
-            <motion.div variants={item}>
-              <label className="block text-sm text-muted mb-2">E-mail</label>
-              <input
-                type="email"
-                required
-                className="w-full bg-transparent border border-divider rounded px-4 py-3 text-foreground text-base focus:border-accent focus:outline-none transition-colors"
-                placeholder="uw@email.nl"
-              />
-            </motion.div>
-            <motion.div variants={item}>
-              <label className="block text-sm text-muted mb-2">Dienst</label>
-              <select
-                required
-                className="w-full bg-transparent border border-divider rounded px-4 py-3 text-foreground text-base focus:border-accent focus:outline-none transition-colors"
-              >
-                <option value="" className="bg-background">Selecteer een dienst</option>
-                {SERVICES.map((s) => (
-                  <option key={s.slug} value={s.slug} className="bg-background">
-                    {s.title} — vanaf €{s.price}
-                  </option>
-                ))}
-              </select>
-            </motion.div>
-            <motion.div variants={item}>
-              <label className="block text-sm text-muted mb-2">Opmerking (optioneel)</label>
-              <textarea
-                rows={3}
-                className="w-full bg-transparent border border-divider rounded px-4 py-3 text-foreground text-base focus:border-accent focus:outline-none transition-colors resize-none"
-                placeholder="Bijv. gewenste datum, bijzonderheden..."
-              />
-            </motion.div>
-            <motion.button
-              variants={item}
-              type="submit"
-              className="w-full bg-accent text-foreground font-medium text-base py-4 rounded hover:bg-accent-hover transition-colors mt-2"
+            <form
+              onSubmit={handleSubmit}
+              className="bg-surface/80 backdrop-blur-md rounded-lg p-6 md:p-8 flex flex-col gap-5"
             >
-              Verstuur aanvraag
-            </motion.button>
-          </motion.form>
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-accent font-medium mb-1">
+                  {t("appointment.eyebrow")}
+                </p>
+                <h2 className="text-xl font-heading font-semibold mb-2">
+                  {t("appointment.title")}
+                </h2>
+                <p className="text-sm text-muted leading-relaxed">
+                  {t("appointment.subtitle")}
+                </p>
+              </div>
+
+              <div>
+                <label htmlFor="afspraak-naam" className="block text-sm text-muted mb-1.5">
+                  {t("appointment.form.name")}
+                </label>
+                <input
+                  type="text"
+                  id="afspraak-naam"
+                  name="naam"
+                  required
+                  value={formData.naam}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                  placeholder={t("appointment.form.placeholders.name")}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="afspraak-email" className="block text-sm text-muted mb-1.5">
+                  {t("appointment.form.email")}
+                </label>
+                <input
+                  type="email"
+                  id="afspraak-email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                  placeholder={t("appointment.form.placeholders.email")}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="afspraak-telefoon" className="block text-sm text-muted mb-1.5">
+                  {t("appointment.form.phone")}
+                </label>
+                <input
+                  type="tel"
+                  id="afspraak-telefoon"
+                  name="telefoon"
+                  required
+                  value={formData.telefoon}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                  placeholder={t("appointment.form.placeholders.phone")}
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label htmlFor="afspraak-postcode" className="block text-sm text-muted mb-1.5">
+                    {t("appointment.form.postalCode")}
+                  </label>
+                  <input
+                    type="text"
+                    id="afspraak-postcode"
+                    name="postcode"
+                    required
+                    value={formData.postcode}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                    placeholder={t("appointment.form.placeholders.postalCode")}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="afspraak-huisnummer" className="block text-sm text-muted mb-1.5">
+                    {t("appointment.form.houseNumber")}
+                  </label>
+                  <input
+                    type="text"
+                    id="afspraak-huisnummer"
+                    name="huisnummer"
+                    required
+                    value={formData.huisnummer}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
+                    placeholder={t("appointment.form.placeholders.houseNumber")}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="afspraak-opmerking" className="block text-sm text-muted mb-1.5">
+                  {t("appointment.form.remark")}
+                </label>
+                <textarea
+                  id="afspraak-opmerking"
+                  name="opmerking"
+                  rows={3}
+                  value={formData.opmerking}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm resize-none"
+                  placeholder={t("appointment.form.placeholders.remark")}
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-accent text-foreground font-medium text-sm px-6 py-3.5 rounded hover:bg-accent-hover transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? t("appointment.form.submitting") : t("appointment.form.submit")}
+              </button>
+
+              {submitStatus === "error" && (
+                <p className="text-sm text-red-500 text-center">
+                  {t("appointment.form.error")}
+                </p>
+              )}
+              {submitStatus === "idle" && (
+                <p className="text-xs text-muted text-center">
+                  {t("appointment.form.info")}
+                </p>
+              )}
+            </form>
+          </motion.div>
         </div>
       </div>
     </section>

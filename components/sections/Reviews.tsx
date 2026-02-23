@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeUp, viewportConfig } from "@/lib/animations";
 import SectionHeader from "@/components/SectionHeader";
 import { REVIEWS } from "@/lib/reviews";
+import { useTranslation } from "@/lib/i18n-context";
 
 const StarIcon = () => (
   <svg className="w-4 h-4 fill-accent" viewBox="0 0 20 20">
@@ -12,15 +13,16 @@ const StarIcon = () => (
 );
 
 export default function Reviews() {
+  const { t } = useTranslation();
   const featuredReviews = REVIEWS.slice(0, 6);
 
   return (
     <section className="py-20 md:py-28 border-t border-divider">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <SectionHeader
-          eyebrow="Wat klanten zeggen"
-          title="Beoordeeld met 5 sterren."
-          subtitle="Onze klanten waarderen onze vakkundigheid en snelle service."
+          eyebrow={t("reviews.eyebrow")}
+          title={t("reviews.title")}
+          subtitle={t("reviews.subtitle")}
         />
 
         <motion.div
@@ -71,7 +73,7 @@ export default function Reviews() {
             href="/reviews"
             className="inline-flex items-center justify-center border border-foreground/20 text-foreground font-medium text-sm px-6 py-3 rounded hover:border-foreground/40 transition-colors duration-200"
           >
-            Alle reviews bekijken
+            {t("reviews.viewAll")}
           </a>
         </motion.div>
       </div>

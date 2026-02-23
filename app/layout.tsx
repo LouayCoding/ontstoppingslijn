@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
 import ThemeProvider from "@/components/ThemeProvider";
+import { I18nProvider } from "@/lib/i18n-context";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -35,10 +36,12 @@ export default function RootLayout({
     <html lang="nl">
       <body className={`${poppins.variable} ${montserrat.variable} antialiased`}>
         <ThemeProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <StickyCTA />
+          <I18nProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <StickyCTA />
+          </I18nProvider>
         </ThemeProvider>
         <Analytics />
       </body>

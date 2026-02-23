@@ -48,7 +48,7 @@ export default function WerkgebiedPage() {
           variants={container}
           initial="hidden"
           animate="visible"
-          className="relative z-0 mx-auto max-w-[1200px] w-full px-6 pt-32 pb-20 md:pt-40 md:pb-28"
+          className="relative z-0 mx-auto max-w-[1400px] w-full px-6 pt-32 pb-20 md:pt-40 md:pb-28"
         >
           <motion.span
             variants={item}
@@ -90,7 +90,7 @@ export default function WerkgebiedPage() {
 
       {/* ── Populaire steden ── */}
       <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-[1200px] px-6">
+        <div className="mx-auto max-w-[1400px] px-6">
           <SectionHeader
             eyebrow="Populaire locaties"
             title="Meest aangevraagd."
@@ -135,7 +135,7 @@ export default function WerkgebiedPage() {
 
       {/* ── Alle gemeenten ── */}
       <section className="py-20 md:py-28 border-t border-divider">
-        <div className="mx-auto max-w-[1200px] px-6">
+        <div className="mx-auto max-w-[1400px] px-6">
           <SectionHeader
             eyebrow="Alle gemeenten"
             title="Zoek uw gemeente."
@@ -210,7 +210,7 @@ export default function WerkgebiedPage() {
         />
         <div className="absolute inset-0 bg-[#141414]/85" />
 
-        <div className="relative z-10 mx-auto max-w-[1200px] px-6">
+        <div className="relative z-10 mx-auto max-w-[1400px] px-6">
           <motion.div
             initial="hidden"
             whileInView="visible"

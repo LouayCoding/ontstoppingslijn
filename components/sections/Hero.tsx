@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { PHONE_HREF, PHONE_NUMBER } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n-context";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
@@ -20,20 +21,22 @@ const item = {
   },
 };
 
-const TRUST_ITEMS = [
-  "Inclusief veegbewijs",
-  "Gecertificeerde vakmensen",
-  "Transparante tarieven",
-  "Snelle service",
+const TRUST_KEYS = [
+  "hero.trustItems.certificate",
+  "hero.trustItems.certified",
+  "hero.trustItems.transparent",
+  "hero.trustItems.fast",
 ];
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     naam: "",
     email: "",
     telefoon: "",
     postcode: "",
     huisnummer: "",
+    opmerking: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
@@ -52,7 +55,7 @@ export default function Hero() {
 
       if (response.ok) {
         setSubmitStatus("success");
-        setFormData({ naam: "", email: "", telefoon: "", postcode: "", huisnummer: "" });
+        setFormData({ naam: "", email: "", telefoon: "", postcode: "", huisnummer: "", opmerking: "" });
       } else {
         setSubmitStatus("error");
       }
@@ -63,7 +66,7 @@ export default function Hero() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -87,29 +90,29 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
 
-      <div className="relative z-0 mx-auto max-w-[1200px] w-full px-6 pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative z-0 mx-auto max-w-[1600px] w-full px-6 md:px-12 lg:px-20 pt-32 pb-20 md:pt-40 md:pb-28">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Content */}
           <motion.div variants={container} initial="hidden" animate="visible">
             <motion.span
               variants={item}
               className="inline-block text-xs uppercase tracking-[0.2em] text-accent font-medium mb-6"
             >
-              Schoorsteenvegen nu v.a. €39,50,-
+              {t("hero.subtitle")}
             </motion.span>
 
             <motion.h1
               variants={item}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-6xl font-heading font-semibold max-w-[14ch] mb-6"
             >
-              Vakkundig en snel geregeld.
+              {t("hero.title")}
             </motion.h1>
 
             <motion.p
               variants={item}
               className="text-muted text-lg md:text-xl max-w-[40ch] mb-10"
             >
-              Schoorsteen vegen, inspectie of reparatie. Vandaag nog geholpen, door heel Nederland.
+              {t("hero.description")}
             </motion.p>
 
             <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -117,15 +120,15 @@ export default function Hero() {
                 href={PHONE_HREF}
                 className="inline-flex items-center justify-center bg-accent text-foreground font-medium text-base px-8 py-4 rounded hover:bg-accent-hover transition-colors duration-200"
               >
-                Bel {PHONE_NUMBER}
+                {t("hero.callButton", { phone: PHONE_NUMBER })}
               </a>
             </motion.div>
 
             <motion.div variants={item} className="flex flex-wrap gap-x-8 gap-y-3">
-              {TRUST_ITEMS.map((text) => (
-                <span key={text} className="flex items-center gap-2.5 text-sm text-muted">
+              {TRUST_KEYS.map((key) => (
+                <span key={key} className="flex items-center gap-2.5 text-sm text-muted">
                   <span className="w-1 h-1 rounded-full bg-accent" />
-                  {text}
+                  {t(key)}
                 </span>
               ))}
             </motion.div>
@@ -143,19 +146,19 @@ export default function Hero() {
             >
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-accent font-medium mb-1">
-                  Direct plannen
+                  {t("appointment.eyebrow")}
                 </p>
                 <h2 className="text-xl font-heading font-semibold mb-2">
-                  Maak een afspraak
+                  {t("appointment.title")}
                 </h2>
                 <p className="text-sm text-muted leading-relaxed">
-                  Vul uw gegevens in en wij nemen binnen 24 uur contact met u op voor een afspraak.
+                  {t("appointment.subtitle")}
                 </p>
               </div>
 
               <div>
                 <label htmlFor="hero-naam" className="block text-sm text-muted mb-1.5">
-                  Naam
+                  {t("appointment.form.name")}
                 </label>
                 <input
                   type="text"
@@ -165,13 +168,13 @@ export default function Hero() {
                   value={formData.naam}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
-                  placeholder="Uw naam"
+                  placeholder={t("appointment.form.placeholders.name")}
                 />
               </div>
 
               <div>
                 <label htmlFor="hero-email" className="block text-sm text-muted mb-1.5">
-                  E-mailadres
+                  {t("appointment.form.email")}
                 </label>
                 <input
                   type="email"
@@ -181,13 +184,13 @@ export default function Hero() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
-                  placeholder="uw@email.nl"
+                  placeholder={t("appointment.form.placeholders.email")}
                 />
               </div>
 
               <div>
                 <label htmlFor="hero-telefoon" className="block text-sm text-muted mb-1.5">
-                  Telefoonnummer
+                  {t("appointment.form.phone")}
                 </label>
                 <input
                   type="tel"
@@ -197,14 +200,14 @@ export default function Hero() {
                   value={formData.telefoon}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
-                  placeholder="06 12345678"
+                  placeholder={t("appointment.form.placeholders.phone")}
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label htmlFor="hero-postcode" className="block text-sm text-muted mb-1.5">
-                    Postcode
+                    {t("appointment.form.postalCode")}
                   </label>
                   <input
                     type="text"
@@ -214,12 +217,12 @@ export default function Hero() {
                     value={formData.postcode}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
-                    placeholder="1234 AB"
+                    placeholder={t("appointment.form.placeholders.postalCode")}
                   />
                 </div>
                 <div>
                   <label htmlFor="hero-huisnummer" className="block text-sm text-muted mb-1.5">
-                    Huisnummer
+                    {t("appointment.form.houseNumber")}
                   </label>
                   <input
                     type="text"
@@ -229,9 +232,24 @@ export default function Hero() {
                     value={formData.huisnummer}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm"
-                    placeholder="123"
+                    placeholder={t("appointment.form.placeholders.houseNumber")}
                   />
                 </div>
+              </div>
+
+              <div>
+                <label htmlFor="hero-opmerking" className="block text-sm text-muted mb-1.5">
+                  {t("appointment.form.remark")}
+                </label>
+                <textarea
+                  id="hero-opmerking"
+                  name="opmerking"
+                  rows={2}
+                  value={formData.opmerking}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-background/60 border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200 text-sm resize-none"
+                  placeholder={t("appointment.form.placeholders.remark")}
+                />
               </div>
 
               <button
@@ -239,22 +257,22 @@ export default function Hero() {
                 disabled={isSubmitting}
                 className="w-full bg-accent text-foreground font-medium text-sm px-6 py-3.5 rounded hover:bg-accent-hover transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "Verzenden..." : "Afspraak aanvragen"}
+                {isSubmitting ? t("appointment.form.submitting") : t("appointment.form.submit")}
               </button>
 
               {submitStatus === "success" && (
                 <p className="text-sm text-accent text-center">
-                  ✓ Bedankt! We nemen binnen 24 uur contact met u op.
+                  {t("appointment.form.success")}
                 </p>
               )}
               {submitStatus === "error" && (
                 <p className="text-sm text-red-500 text-center">
-                  Er is iets misgegaan. Probeer het opnieuw of bel ons direct.
+                  {t("appointment.form.error")}
                 </p>
               )}
               {submitStatus === "idle" && (
                 <p className="text-xs text-muted text-center">
-                  We nemen binnen 24 uur contact met u op
+                  {t("appointment.form.info")}
                 </p>
               )}
             </form>

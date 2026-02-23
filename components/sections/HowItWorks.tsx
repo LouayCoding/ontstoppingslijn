@@ -4,32 +4,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, viewportConfig } from "@/lib/animations";
 import { PHONE_HREF, PHONE_NUMBER } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n-context";
 
-const STEPS = [
-  {
-    number: "01",
-    title: "Bel of plan online",
-    description:
-      "Neem telefonisch contact op of maak direct een afspraak via onze website. Wij reageren binnen 24 uur.",
-  },
-  {
-    number: "02",
-    title: "Wij komen langs",
-    description:
-      "Een ervaren vakman komt op de afgesproken dag bij u langs. Geen verrassingen, geen verborgen kosten.",
-  },
-  {
-    number: "03",
-    title: "Klaar en veilig",
-    description:
-      "Uw schoorsteen of luchtkanaal is weer schoon en veilig. U ontvangt een bewijs van onderhoud voor uw verzekering.",
-  },
-];
+const STEP_KEYS = ["step1", "step2", "step3"];
+const STEP_NUMBERS = ["01", "02", "03"];
 
 export default function HowItWorks() {
+  const { t } = useTranslation();
   return (
     <section className="py-20 md:py-28 border-t border-divider">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           <motion.div
             initial="hidden"
@@ -55,7 +39,7 @@ export default function HowItWorks() {
               variants={fadeUp}
               className="inline-block text-xs uppercase tracking-[0.2em] text-accent font-medium mb-4"
             >
-              Zo werkt het
+              {t("howItWorks.eyebrow")}
             </motion.span>
             <motion.h2
               initial="hidden"
@@ -64,7 +48,7 @@ export default function HowItWorks() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-heading font-semibold mb-12"
             >
-              In drie stappen geregeld.
+              {t("howItWorks.title")}
             </motion.h2>
 
             <motion.div
@@ -77,17 +61,17 @@ export default function HowItWorks() {
               }}
               className="flex flex-col gap-10 mb-10"
             >
-              {STEPS.map((step) => (
-                <motion.div key={step.number} variants={fadeUp} className="flex gap-6">
+              {STEP_KEYS.map((key, i) => (
+                <motion.div key={key} variants={fadeUp} className="flex gap-6">
                   <span className="text-3xl font-heading font-semibold text-accent/30 shrink-0">
-                    {step.number}
+                    {STEP_NUMBERS[i]}
                   </span>
                   <div>
                     <h3 className="text-base font-heading font-semibold mb-1.5">
-                      {step.title}
+                      {t(`howItWorks.steps.${key}.title`)}
                     </h3>
                     <p className="text-sm text-muted leading-relaxed">
-                      {step.description}
+                      {t(`howItWorks.steps.${key}.description`)}
                     </p>
                   </div>
                 </motion.div>
@@ -104,7 +88,7 @@ export default function HowItWorks() {
                 href={PHONE_HREF}
                 className="inline-flex items-center justify-center bg-accent text-foreground font-medium text-sm px-6 py-3 rounded hover:bg-accent-hover transition-colors"
               >
-                Bel {PHONE_NUMBER}
+                {t("howItWorks.callButton", { phone: PHONE_NUMBER })}
               </a>
             </motion.div>
           </div>

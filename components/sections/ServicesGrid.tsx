@@ -6,15 +6,17 @@ import { motion } from "framer-motion";
 import { staggerItem, viewportConfig } from "@/lib/animations";
 import { SERVICES } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
+import { useTranslation } from "@/lib/i18n-context";
 
 export default function ServicesGrid() {
+  const { t } = useTranslation();
   return (
     <section className="py-20 md:py-28">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <SectionHeader
-          eyebrow="Onze diensten"
-          title="Alles voor uw schoorsteen."
-          subtitle="Van regulier onderhoud tot specialistisch werk. Vakkundig en eerlijk geprijsd."
+          eyebrow={t("services.eyebrow")}
+          title={t("services.title")}
+          subtitle={t("services.subtitle")}
         />
 
         <motion.div
@@ -44,7 +46,7 @@ export default function ServicesGrid() {
                 </div>
                 <div className="flex flex-col p-6 md:p-8">
                   <p className="text-xs uppercase tracking-[0.15em] text-accent font-medium mb-3">
-                    Vanaf €{service.price}
+                    {t("services.from")} €{service.price}
                   </p>
                   <h3 className="text-lg font-heading font-semibold mb-2 group-hover:text-accent transition-colors duration-300">
                     {service.title}

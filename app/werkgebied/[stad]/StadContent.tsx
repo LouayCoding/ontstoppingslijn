@@ -111,7 +111,7 @@ export default function StadContent({ stad }: { stad: string }) {
           variants={container}
           initial="hidden"
           animate="visible"
-          className="relative z-0 mx-auto max-w-[1200px] w-full px-6 pt-32 pb-20 md:pt-40 md:pb-28"
+          className="relative z-0 mx-auto max-w-[1400px] w-full px-6 pt-32 pb-20 md:pt-40 md:pb-28"
         >
           <motion.div variants={item} className="flex items-center gap-2 text-sm text-muted mb-6">
             <Link href="/werkgebied" className="hover:text-accent transition-colors">
@@ -170,7 +170,7 @@ export default function StadContent({ stad }: { stad: string }) {
 
       {/* ── Diensten Grid ── */}
       <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-[1200px] px-6">
+        <div className="mx-auto max-w-[1400px] px-6">
           <SectionHeader
             eyebrow={`Onze diensten in ${stad}`}
             title="Alles voor uw schoorsteen."
@@ -222,7 +222,7 @@ export default function StadContent({ stad }: { stad: string }) {
 
       {/* ── Hoe werkt het ── */}
       <section className="py-20 md:py-28 border-t border-divider">
-        <div className="mx-auto max-w-[1200px] px-6">
+        <div className="mx-auto max-w-[1400px] px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <motion.div
               initial="hidden"
@@ -307,7 +307,7 @@ export default function StadContent({ stad }: { stad: string }) {
 
       {/* ── Afspraak Formulier ── */}
       <section id="afspraak" className="py-20 md:py-28 border-t border-divider">
-        <div className="mx-auto max-w-[1200px] px-6">
+        <div className="mx-auto max-w-[1400px] px-6">
           <SectionHeader
             eyebrow={`Afspraak in ${stad}`}
             title="Direct plannen."
@@ -446,7 +446,7 @@ export default function StadContent({ stad }: { stad: string }) {
         />
         <div className="absolute inset-0 bg-[#141414]/85" />
 
-        <div className="relative z-10 mx-auto max-w-[1200px] px-6">
+        <div className="relative z-10 mx-auto max-w-[1400px] px-6">
           <motion.div
             initial="hidden"
             whileInView="visible"

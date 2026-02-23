@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { PHONE_HREF } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n-context";
 
 export default function StickyCTA() {
+  const { t } = useTranslation();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -23,13 +25,13 @@ export default function StickyCTA() {
         href={PHONE_HREF}
         className="flex-1 text-center bg-accent text-foreground font-medium text-sm py-3 rounded hover:bg-accent-hover transition-colors"
       >
-        Bel direct
+        {t("stickyCta.call")}
       </a>
       <Link
         href="/afspraak"
         className="flex-1 text-center border border-divider text-foreground font-medium text-sm py-3 rounded hover:border-muted transition-colors"
       >
-        Afspraak maken
+        {t("stickyCta.appointment")}
       </Link>
     </div>
   );

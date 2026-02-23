@@ -63,6 +63,7 @@
       "phone": "Telefoonnummer",
       "postalCode": "Postcode",
       "houseNumber": "Huisnummer",
+      "remark": "Opmerking (optioneel)",
       "submit": "Afspraak aanvragen",
       "submitting": "Verzenden...",
       "success": "✓ Bedankt! We nemen binnen 24 uur contact met u op.",
@@ -74,7 +75,8 @@
         "email": "uw@email.nl",
         "phone": "06 12345678",
         "postalCode": "1234 AB",
-        "houseNumber": "123"
+        "houseNumber": "123",
+        "remark": "Bijv. gewenste datum, bijzonderheden..."
       }
     }
   },
