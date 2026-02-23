@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { PHONE_NUMBER, PHONE_HREF, COMPANY_NAME, NAV_LINKS } from "@/lib/constants";
 import { useTheme } from "@/components/ThemeProvider";
@@ -61,8 +62,15 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20 flex items-center justify-between h-16 md:h-20">
-        <Link href="/" className="font-heading text-lg font-semibold tracking-tight">
-          {COMPANY_NAME}
+        <Link href="/" className="relative block h-10 w-auto">
+          <Image
+            src="/logo.png"
+            alt={COMPANY_NAME}
+            width={160}
+            height={40}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
