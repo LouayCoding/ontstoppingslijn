@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
 import ThemeProvider from "@/components/ThemeProvider";
 import { I18nProvider } from "@/lib/i18n-context";
-import DebugConsole from "@/components/DebugConsole";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -50,7 +49,6 @@ export default function RootLayout({
             <main>{children}</main>
             <Footer />
             <StickyCTA />
-            <DebugConsole />
           </I18nProvider>
         </ThemeProvider>
         <Analytics />
