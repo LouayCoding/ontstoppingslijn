@@ -143,7 +143,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden fixed inset-0 top-16 bg-background z-40 overflow-y-auto"
+            className="md:hidden fixed inset-0 top-16 bg-background z-[60] overflow-y-auto"
             style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
           >
             <nav className="flex flex-col px-6 pt-8 gap-1">

@@ -78,10 +78,3 @@ a {
   }
 }
 
-/* iOS: fix sticky/fixed positioning with keyboard */
-@supports (-webkit-touch-callout: none) {
-  .fixed {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-}
