@@ -3,6 +3,7 @@
     "home": "Home",
     "diensten": "Services",
     "werkgebied": "Service Area",
+    "tarieven": "Pricing",
     "reviews": "Reviews",
     "overOns": "About Us",
     "contact": "Contact"
@@ -149,7 +150,14 @@
     "faq": {
       "eyebrow": "Frequently asked questions",
       "title": "Questions about {service}?"
-    }
+    },
+    "directRegelen": "Get started",
+    "needService": "Need {service}?",
+    "contactCta": "Contact us for an appointment. Fast, professional and fairly priced.",
+    "callButton": "Call {phone}",
+    "appointmentButton": "Book appointment",
+    "otherServices": "Other services",
+    "fromPrice": "From \u20ac{price}"
   },
   "stickyCta": {
     "call": "Call now",
@@ -187,6 +195,79 @@
         "description": "Odour nuisance in or around your property? This may indicate a broken or blocked sewer that needs immediate attention.",
         "solution": "24/7 emergency service available →"
       }
+    }
+  },
+  "dienstenPage": {
+    "subtitle": "Professional drain and sewer service throughout the Netherlands.",
+    "moreInfo": "More info"
+  },
+  "tarievenPage": {
+    "eyebrow": "Pricing",
+    "title": "Clear prices, no surprises.",
+    "subtitle": "What you see is what you pay. All prices exclude VAT.",
+    "from": "from",
+    "moreInfo": "More info",
+    "disclaimer": "We carry out our work nationwide through our network of experienced technicians. Prices listed exclude VAT. Emergency rates apply outside regular working hours. Contact us for a custom quote.",
+    "callButton": "Call {phone}"
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "Get in touch with us.",
+    "description": "Call us directly or send an email. We always respond within 24 hours.",
+    "phone": "Phone",
+    "available": "Available 24/7",
+    "email": "Email",
+    "emailNote": "Response as soon as possible",
+    "area": "Service area",
+    "areaValue": "All of the Netherlands",
+    "areaNote": "Nationwide network of professionals"
+  },
+  "reviewsPage": {
+    "title": "What our customers say.",
+    "ratingText": "Rated {rating} out of 5 stars by {count} satisfied customers."
+  },
+  "werkgebiedPage": {
+    "title": "Active throughout the Netherlands.",
+    "subtitle": "Our nationwide network of technicians is ready for you. From Groningen to Maastricht.",
+    "popularLocations": "Popular locations",
+    "mostRequested": "Most requested.",
+    "mostRequestedSub": "Our technicians are most active in these regions.",
+    "surrounding": "+ surrounding areas",
+    "allMunicipalities": "All municipalities",
+    "searchTitle": "Find your municipality.",
+    "searchSubtitle": "We are active in more than 300 municipalities throughout the Netherlands.",
+    "searchPlaceholder": "Search your municipality...",
+    "municipalitySingular": "municipality",
+    "municipalityPlural": "municipalities",
+    "found": "found",
+    "notFound": "No municipalities found for",
+    "notFoundNote": "Can't find your location? Contact us \u2014 we're active almost everywhere.",
+    "ctaEyebrow": "Get started",
+    "ctaTitle": "Ready to get it sorted?",
+    "ctaDescription": "Call us directly or book an appointment online. We're here for you.",
+    "callButton": "Call {phone}",
+    "appointmentButton": "Book appointment"
+  },
+  "faqItems": {
+    "0": {
+      "question": "How quickly can you arrive for a blocked drain?",
+      "answer": "For emergencies, we're often on-site within 1-2 hours. We're available 24/7, including weekends and holidays."
+    },
+    "1": {
+      "question": "What does it cost to unblock a drain?",
+      "answer": "A standard drain unblocking starts from \u20ac149. The exact cost depends on the severity and location of the blockage. Prices exclude VAT."
+    },
+    "2": {
+      "question": "Are you active throughout the Netherlands?",
+      "answer": "Yes, we work with a nationwide network of experienced technicians. From Groningen to Maastricht."
+    },
+    "3": {
+      "question": "Do you also work for businesses and HOAs?",
+      "answer": "Yes, we provide drain services for individuals, businesses, property managers, HOAs and government institutions."
+    },
+    "4": {
+      "question": "Do I need to be home during the work?",
+      "answer": "Yes, someone needs to be present to provide access. Most jobs take 30-60 minutes."
     }
   }
 }

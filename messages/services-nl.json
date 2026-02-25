@@ -1,0 +1,404 @@
+{
+  "servicesList": {
+    "riool-ontstoppen": {
+      "title": "Riool ontstoppen",
+      "description": "Snel en vakkundig uw riool ontstoppen met professionele apparatuur. 24/7 spoedservice beschikbaar.",
+      "details": {
+        "0": { "label": "Riool ontstoppen", "price": "€149,-" },
+        "1": { "label": "Spoedservice (24/7)", "price": "€199,-" }
+      },
+      "benefits": {
+        "0": "Snelle oplossing bij verstoppingen",
+        "1": "Professionele hogedrukreiniging",
+        "2": "Voorkomt waterschade en overlast",
+        "3": "24/7 spoedservice beschikbaar"
+      },
+      "process": {
+        "0": { "step": "Diagnose", "description": "We lokaliseren de verstopping en bepalen de oorzaak" },
+        "1": { "step": "Ontstopping", "description": "Professioneel ontstoppen met hogedrukreiniging of veerspiraal" },
+        "2": { "step": "Doorspoelen", "description": "Het riool wordt grondig doorgespoeld" },
+        "3": { "step": "Controle", "description": "Eindcontrole op goede doorstroming" }
+      },
+      "faq": {
+        "0": { "q": "Hoe snel kunnen jullie er zijn bij een spoedgeval?", "a": "Bij spoed zijn wij vaak binnen 1-2 uur ter plaatse. Wij zijn 24/7 bereikbaar." },
+        "1": { "q": "Wat zijn veelvoorkomende oorzaken van een verstopt riool?", "a": "Vet- en zeepophoping, haren, vochtige doekjes, wortelgroei en kalkafzetting zijn de meest voorkomende oorzaken." },
+        "2": { "q": "Hoe lang duurt het ontstoppen?", "a": "Gemiddeld 30-60 minuten, afhankelijk van de ernst en locatie van de verstopping." }
+      }
+    },
+    "wc-ontstoppen": {
+      "title": "WC ontstoppen",
+      "description": "Uw toilet verstopt? Wij lossen het snel en hygiënisch op. Geen rommel, geen gedoe.",
+      "details": {
+        "0": { "label": "WC ontstoppen", "price": "€99,-" },
+        "1": { "label": "WC ontstoppen (spoed)", "price": "€149,-" }
+      },
+      "benefits": {
+        "0": "Snel ter plaatse, ook in het weekend",
+        "1": "Hygiënische en nette werkwijze",
+        "2": "Professionele apparatuur voor hardnekkige verstoppingen",
+        "3": "Advies ter voorkoming van herhaling"
+      },
+      "process": {
+        "0": { "step": "Inspectie", "description": "We bepalen de aard en locatie van de verstopping" },
+        "1": { "step": "Ontstopping", "description": "Vakkundig ontstoppen met de juiste methode" },
+        "2": { "step": "Reiniging", "description": "Alles wordt netjes en hygiënisch achtergelaten" },
+        "3": { "step": "Advies", "description": "Tips om toekomstige verstoppingen te voorkomen" }
+      },
+      "faq": {
+        "0": { "q": "Wat kost WC ontstoppen?", "a": "Een standaard WC ontstopping kost €99,-. Bij spoed buiten kantooruren geldt een spoedtarief van €149,-." },
+        "1": { "q": "Kunnen jullie alle soorten toiletten ontstoppen?", "a": "Ja, wij hebben ervaring met alle typen toiletten, inclusief hangtoiletten en oudere modellen." },
+        "2": { "q": "Hoe voorkom ik een verstopt toilet?", "a": "Spoel alleen toiletpapier door en gebruik geen vochtige doekjes. Regelmatig spoelen met heet water helpt ook." }
+      }
+    },
+    "afvoer-ontstoppen": {
+      "title": "Afvoer ontstoppen",
+      "description": "Verstopte afvoer in badkamer, douche of wasbak? Wij maken het weer vrij.",
+      "details": {
+        "0": { "label": "Afvoer ontstoppen", "price": "€89,-" },
+        "1": { "label": "Meerdere afvoeren", "price": "€69,- per extra afvoer" }
+      },
+      "benefits": {
+        "0": "Oplossing voor alle typen afvoeren",
+        "1": "Snelle en schone werkwijze",
+        "2": "Voorkomt wateroverlast in huis",
+        "3": "Professionele veerspiraal en hogedruk"
+      },
+      "process": {
+        "0": { "step": "Lokaliseren", "description": "We bepalen waar de verstopping zich bevindt" },
+        "1": { "step": "Ontstoppen", "description": "Met veerspiraal of hogedruk wordt de verstopping verwijderd" },
+        "2": { "step": "Doorspoelen", "description": "De afvoer wordt grondig doorgespoeld" },
+        "3": { "step": "Controle", "description": "We controleren of het water goed wegloopt" }
+      },
+      "faq": {
+        "0": { "q": "Welke afvoeren kunnen jullie ontstoppen?", "a": "Alle afvoeren: douche, wasbak, badkuip, wasmachine-afvoer en vloerputjes." },
+        "1": { "q": "Hoe lang duurt het ontstoppen van een afvoer?", "a": "Meestal 15-30 minuten per afvoer, afhankelijk van de verstopping." },
+        "2": { "q": "Kan ik het zelf proberen?", "a": "Bij lichte verstoppingen kunt u een ontstopper proberen. Komt het water niet weg, bel dan een professional om schade te voorkomen." }
+      }
+    },
+    "rioolreiniging": {
+      "title": "Rioolreiniging",
+      "description": "Preventieve rioolreiniging en onderhoud. Voorkom verstoppingen en verleng de levensduur van uw leidingen.",
+      "details": {
+        "0": { "label": "Rioolreiniging", "price": "€195,-" },
+        "1": { "label": "Periodiek onderhoudscontract", "price": "Op aanvraag" }
+      },
+      "benefits": {
+        "0": "Voorkomt verstoppingen en stankoverlast",
+        "1": "Verwijdert vet-, kalk- en vuilophoping",
+        "2": "Verlengt de levensduur van uw riolering",
+        "3": "Geschikt voor particulier en zakelijk"
+      },
+      "process": {
+        "0": { "step": "Inspectie", "description": "We beoordelen de staat van uw riolering" },
+        "1": { "step": "Doorspuiten", "description": "Hogedrukreiniging van de leidingen" },
+        "2": { "step": "Controle", "description": "We controleren de doorstroming na reiniging" },
+        "3": { "step": "Rapportage", "description": "Advies over onderhoud en eventuele aandachtspunten" }
+      },
+      "faq": {
+        "0": { "q": "Hoe vaak moet een riool gereinigd worden?", "a": "Wij adviseren elke 2-3 jaar preventief reinigen. Bij bedrijven met veel vetafvoer kan vaker nodig zijn." },
+        "1": { "q": "Is rioolreiniging ook geschikt voor bedrijven?", "a": "Ja, wij reinigen riolering voor zowel particulieren als bedrijven, horeca en vastgoedbeheerders." },
+        "2": { "q": "Merkt u verschil na reiniging?", "a": "Ja, het water loopt sneller weg en stankoverlast verdwijnt. Het voorkomt ook toekomstige verstoppingen." }
+      }
+    },
+    "rioolinspectie": {
+      "title": "Rioolinspectie",
+      "description": "Camera-inspectie van uw riolering. Opsporen van lekkages, scheuren, verzakkingen of wortelgroei.",
+      "details": {
+        "0": { "label": "Camera-inspectie", "price": "€175,-" },
+        "1": { "label": "Inspectie + rapport", "price": "€225,-" }
+      },
+      "benefits": {
+        "0": "Exacte locatie van problemen in beeld",
+        "1": "Detecteert scheuren, wortelgroei en verzakkingen",
+        "2": "HD-beelden en uitgebreid rapport",
+        "3": "Ideaal bij aankoop woning of terugkerende problemen"
+      },
+      "process": {
+        "0": { "step": "Voorbereiding", "description": "Camera-apparatuur wordt klaargemaakt en getest" },
+        "1": { "step": "Inspectie", "description": "HD-camera wordt door de riolering geleid" },
+        "2": { "step": "Analyse", "description": "Directe beoordeling van de staat van uw leidingen" },
+        "3": { "step": "Rapportage", "description": "U ontvangt een rapport met beelden en advies" }
+      },
+      "faq": {
+        "0": { "q": "Wanneer is een rioolinspectie nodig?", "a": "Bij terugkerende verstoppingen, stankoverlast, bij aankoop van een woning, of als u de staat van uw riolering wilt weten." },
+        "1": { "q": "Hoe lang duurt een rioolinspectie?", "a": "Gemiddeld 30-45 minuten, afhankelijk van de lengte en toegankelijkheid van de leidingen." },
+        "2": { "q": "Krijg ik de beelden te zien?", "a": "Ja, u ontvangt een uitgebreid rapport met foto's en eventueel video-opnames." }
+      }
+    },
+    "rioolreparatie": {
+      "title": "Rioolreparatie",
+      "description": "Reparatie van beschadigde riolering. Van kleine lekkages tot volledige leidingvervanging.",
+      "details": {
+        "0": { "label": "Plaatselijke reparatie", "price": "Vanaf €295,-" },
+        "1": { "label": "Leidingvervanging", "price": "Op aanvraag" }
+      },
+      "benefits": {
+        "0": "Vakkundige reparatie van lekkages",
+        "1": "Minimale overlast door gerichte aanpak",
+        "2": "Vervanging van beschadigde leidingen",
+        "3": "Garantie op uitgevoerd werk"
+      },
+      "process": {
+        "0": { "step": "Diagnose", "description": "Camera-inspectie om de schade exact te lokaliseren" },
+        "1": { "step": "Offerte", "description": "Duidelijke offerte met uitleg van de werkzaamheden" },
+        "2": { "step": "Reparatie", "description": "Vakkundige reparatie of vervanging van de leiding" },
+        "3": { "step": "Controle", "description": "Eindcontrole op waterdichtheid en doorstroming" }
+      },
+      "faq": {
+        "0": { "q": "Hoe herken ik een kapot riool?", "a": "Terugkerende verstoppingen, stankoverlast, natte plekken in de tuin of verzakking van bestrating kunnen wijzen op rioolschade." },
+        "1": { "q": "Moet de tuin opengebroken worden?", "a": "Niet altijd. Bij kleine schade kan soms een relining (kousboring) worden toegepast zonder graafwerk." },
+        "2": { "q": "Hoe lang duurt een rioolreparatie?", "a": "Een plaatselijke reparatie duurt meestal 1 dag. Bij grotere werkzaamheden kan dit 2-3 dagen zijn." }
+      }
+    },
+    "hemelwaterafvoer": {
+      "title": "Hemelwater & Afwatering",
+      "description": "Reiniging en onderhoud van regenafvoeren. Oplossen en voorkomen van wateroverlast.",
+      "details": {
+        "0": { "label": "Hemelwaterafvoer reinigen", "price": "€129,-" },
+        "1": { "label": "Ontstopping + inspectie", "price": "€179,-" }
+      },
+      "benefits": {
+        "0": "Voorkomt wateroverlast bij hevige regenval",
+        "1": "Reiniging van goten, kolken en afvoerleidingen",
+        "2": "Snelle inzet bij acute wateroverlast",
+        "3": "Preventief onderhoud bespaart kosten"
+      },
+      "process": {
+        "0": { "step": "Inspectie", "description": "We controleren goten, kolken en afvoerleidingen" },
+        "1": { "step": "Reiniging", "description": "Doorspuiten en reinigen van hemelwaterafvoer" },
+        "2": { "step": "Ontstopping", "description": "Verwijderen van bladeren, vuil en wortelgroei" },
+        "3": { "step": "Advies", "description": "Tips voor preventief onderhoud" }
+      },
+      "faq": {
+        "0": { "q": "Hoe vaak moet een hemelwaterafvoer gereinigd worden?", "a": "Wij adviseren minimaal 1x per jaar, bij voorkeur in het najaar na het bladverlies." },
+        "1": { "q": "Wat als er water in mijn kelder staat?", "a": "Bel ons direct. Wij bieden 24/7 spoedservice bij acute wateroverlast." },
+        "2": { "q": "Kan wortelgroei een hemelwaterafvoer verstoppen?", "a": "Ja, wortels van bomen en struiken zijn een veelvoorkomende oorzaak. Wij verwijderen deze en adviseren over preventie." }
+      }
+    },
+    "keukenafvoer-ontstoppen": {
+      "title": "Keukenafvoer ontstoppen",
+      "description": "Verstopte keukenafvoer door vet of etensresten? Wij maken het snel weer vrij.",
+      "details": {
+        "0": { "label": "Keukenafvoer ontstoppen", "price": "€89,-" },
+        "1": { "label": "Keukenafvoer + vetreiniging", "price": "€139,-" }
+      },
+      "benefits": {
+        "0": "Specialist in vetverstopping",
+        "1": "Snelle en schone werkwijze",
+        "2": "Professionele ontvetters en hogedruk",
+        "3": "Advies om herhaling te voorkomen"
+      },
+      "process": {
+        "0": { "step": "Inspectie", "description": "We bekijken de afvoer en bepalen de verstopping" },
+        "1": { "step": "Ontstoppen", "description": "Verwijderen van vet, etensresten en vuil" },
+        "2": { "step": "Doorspoelen", "description": "Grondig doorspoelen voor optimale doorstroming" },
+        "3": { "step": "Preventie", "description": "Advies over vetvangers en goed gebruik" }
+      },
+      "faq": {
+        "0": { "q": "Waarom raakt mijn keukenafvoer steeds verstopt?", "a": "Meestal door ophoping van vet, etensresten en zeep. Een vetafscheider of regelmatig spoelen met heet water helpt." },
+        "1": { "q": "Kan ik zelf een keukenafvoer ontstoppen?", "a": "Bij lichte verstopping kunt u heet water met soda proberen. Bij hardnekkige verstopping is professionele hulp nodig." },
+        "2": { "q": "Helpt een vetafscheider?", "a": "Ja, vooral bij intensief kookgebruik of in de horeca is een vetafscheider zeer effectief." }
+      }
+    },
+    "douche-ontstoppen": {
+      "title": "Douche ontstoppen",
+      "description": "Verstopte douche? Haren, zeep en kalk maken we snel weer vrij. Schone en hygiënische werkwijze.",
+      "details": {
+        "0": { "label": "Douche ontstoppen", "price": "€89,-" },
+        "1": { "label": "Douche + afvoer reiniging", "price": "€119,-" }
+      },
+      "benefits": {
+        "0": "Snelle oplossing voor verstopte douche",
+        "1": "Verwijdering van haren, zeep en kalkresten",
+        "2": "Hygiënische werkwijze zonder rommel",
+        "3": "Preventief advies om herhaling te voorkomen"
+      },
+      "process": {
+        "0": { "step": "Inspectie", "description": "We bepalen de oorzaak van de verstopping" },
+        "1": { "step": "Ontstoppen", "description": "Professioneel verwijderen van de verstopping" },
+        "2": { "step": "Doorspoelen", "description": "De afvoer wordt grondig doorgespoeld" },
+        "3": { "step": "Advies", "description": "Tips om toekomstige verstoppingen te voorkomen" }
+      },
+      "faq": {
+        "0": { "q": "Waardoor raakt een douche verstopt?", "a": "Meestal door ophoping van haren, zeep en kalk in de afvoer. Een haarfilter kan dit grotendeels voorkomen." },
+        "1": { "q": "Hoe lang duurt het ontstoppen?", "a": "Een doucheontstopping duurt gemiddeld 15-30 minuten." },
+        "2": { "q": "Kan ik het zelf proberen?", "a": "Bij lichte verstoppingen kunt u een ontstopper of soda met azijn proberen. Helpt het niet, bel dan een vakman." }
+      }
+    },
+    "hoofdriolering-ontstoppen": {
+      "title": "Hoofdriolering ontstoppen",
+      "description": "Verstopping in de hoofdriolering? Wij lossen het op met professionele hogedrukapparatuur.",
+      "details": {
+        "0": { "label": "Hoofdriolering ontstoppen", "price": "€199,-" },
+        "1": { "label": "Spoedservice (24/7)", "price": "€249,-" }
+      },
+      "benefits": {
+        "0": "Krachtige hogedrukreiniging voor hoofdleidingen",
+        "1": "Oplossing voor hardnekkige verstoppingen",
+        "2": "Voorkomt waterschade aan meerdere woningen",
+        "3": "24/7 spoedservice beschikbaar"
+      },
+      "process": {
+        "0": { "step": "Diagnose", "description": "Lokaliseren van de verstopping in de hoofdleiding" },
+        "1": { "step": "Hogedruk", "description": "Ontstoppen met professionele hogedrukapparatuur" },
+        "2": { "step": "Doorspoelen", "description": "De volledige leiding wordt doorgespoeld" },
+        "3": { "step": "Controle", "description": "Camera-inspectie ter controle van de doorstroming" }
+      },
+      "faq": {
+        "0": { "q": "Wat is een hoofdriolering?", "a": "De hoofdriolering is de centrale afvoerleiding die alle afvoeren van uw woning naar het gemeenteriool verbindt." },
+        "1": { "q": "Hoe herken ik een verstopping in de hoofdriolering?", "a": "Meerdere afvoeren die tegelijk slecht lopen, borrelende toiletten of stankoverlast wijzen op een verstopping in de hoofdleiding." },
+        "2": { "q": "Is dit duurder dan een gewone ontstopping?", "a": "De hoofdriolering vereist zwaardere apparatuur, vandaar de hogere prijs. De exacte kosten hangen af van de situatie." }
+      }
+    },
+    "preventieve-rioolreiniging": {
+      "title": "Preventieve rioolreiniging",
+      "description": "Voorkom verstoppingen met regelmatige rioolreiniging. Verwijdering van vet, kalk en vuilophoping.",
+      "details": {
+        "0": { "label": "Preventieve reiniging", "price": "€195,-" },
+        "1": { "label": "Jaarcontract", "price": "Op aanvraag" }
+      },
+      "benefits": {
+        "0": "Voorkomt verstoppingen en stankoverlast",
+        "1": "Verwijdert vet-, kalk- en vuilophoping",
+        "2": "Verlengt de levensduur van uw riolering",
+        "3": "Geschikt voor particulier en zakelijk"
+      },
+      "process": {
+        "0": { "step": "Inspectie", "description": "We beoordelen de staat van uw riolering" },
+        "1": { "step": "Doorspuiten", "description": "Hogedrukreiniging van de leidingen" },
+        "2": { "step": "Controle", "description": "We controleren de doorstroming na reiniging" },
+        "3": { "step": "Rapportage", "description": "Advies over onderhoud en eventuele aandachtspunten" }
+      },
+      "faq": {
+        "0": { "q": "Hoe vaak moet een riool gereinigd worden?", "a": "Wij adviseren elke 2-3 jaar preventief reinigen. Bij bedrijven met veel vetafvoer kan vaker nodig zijn." },
+        "1": { "q": "Is dit ook geschikt voor bedrijven?", "a": "Ja, wij reinigen riolering voor zowel particulieren als bedrijven, horeca en vastgoedbeheerders." },
+        "2": { "q": "Merkt u verschil na reiniging?", "a": "Ja, het water loopt sneller weg en stankoverlast verdwijnt. Het voorkomt ook toekomstige verstoppingen." }
+      }
+    },
+    "periodiek-onderhoud": {
+      "title": "Periodiek onderhoud",
+      "description": "Regelmatig onderhoud aan uw riolering voorkomt dure reparaties. Onderhoudscontracten op maat.",
+      "details": {
+        "0": { "label": "Eenmalig onderhoud", "price": "€175,-" },
+        "1": { "label": "Onderhoudscontract (per jaar)", "price": "Op aanvraag" }
+      },
+      "benefits": {
+        "0": "Voorkomt onverwachte verstoppingen",
+        "1": "Bespaart op dure noodreparaties",
+        "2": "Vaste afspraken op een moment dat u uitkomt",
+        "3": "Geschikt voor woningen, VvE's en bedrijfspanden"
+      },
+      "process": {
+        "0": { "step": "Planning", "description": "Samen stellen we een onderhoudsschema op" },
+        "1": { "step": "Inspectie", "description": "Controle van de staat van uw riolering" },
+        "2": { "step": "Reiniging", "description": "Doorspuiten en reinigen van leidingen" },
+        "3": { "step": "Rapport", "description": "Verslag van de werkzaamheden en aandachtspunten" }
+      },
+      "faq": {
+        "0": { "q": "Voor wie is periodiek onderhoud geschikt?", "a": "Voor iedereen die verstoppingen wil voorkomen: huiseigenaren, VvE's, vastgoedbeheerders en bedrijven." },
+        "1": { "q": "Hoe vaak komt u langs?", "a": "Standaard 1x per jaar, maar de frequentie stemmen we af op uw situatie en wensen." },
+        "2": { "q": "Kan ik een onderhoudscontract opzeggen?", "a": "Ja, onze contracten zijn flexibel en maandelijks opzegbaar." }
+      }
+    },
+    "doorspuiten-leidingen": {
+      "title": "Doorspuiten van leidingen",
+      "description": "Professioneel doorspuiten van afvoerleidingen met hogedruk. Voor optimale doorstroming.",
+      "details": {
+        "0": { "label": "Doorspuiten leidingen", "price": "€149,-" },
+        "1": { "label": "Doorspuiten + camera-inspectie", "price": "€225,-" }
+      },
+      "benefits": {
+        "0": "Krachtige hogedrukreiniging tot 200 bar",
+        "1": "Verwijdert alle aanslag en ophoping",
+        "2": "Geschikt voor alle typen leidingen",
+        "3": "Preventief en curatief inzetbaar"
+      },
+      "process": {
+        "0": { "step": "Voorbereiding", "description": "Aansluiten van hogedrukapparatuur" },
+        "1": { "step": "Doorspuiten", "description": "Leidingen worden onder hoge druk gereinigd" },
+        "2": { "step": "Naspoelen", "description": "Grondig naspoelen voor schone leidingen" },
+        "3": { "step": "Controle", "description": "Controleren of de doorstroming optimaal is" }
+      },
+      "faq": {
+        "0": { "q": "Wat is het verschil met gewoon ontstoppen?", "a": "Doorspuiten reinigt de gehele leiding preventief, terwijl ontstoppen gericht is op het verwijderen van een specifieke verstopping." },
+        "1": { "q": "Kan doorspuiten leidingen beschadigen?", "a": "Nee, onze vakmensen werken met de juiste druk voor elk type leiding. Dit is volledig veilig." },
+        "2": { "q": "Hoe lang duurt het doorspuiten?", "a": "Gemiddeld 30-60 minuten, afhankelijk van de lengte en het aantal leidingen." }
+      }
+    },
+    "leidingvervanging": {
+      "title": "Vervangen van leidingen",
+      "description": "Beschadigde of verouderde leidingen? Wij vervangen ze vakkundig met minimale overlast.",
+      "details": {
+        "0": { "label": "Leidingvervanging (per meter)", "price": "Vanaf €395,-" },
+        "1": { "label": "Volledige renovatie", "price": "Op aanvraag" }
+      },
+      "benefits": {
+        "0": "Vakkundige vervanging van oude leidingen",
+        "1": "Gebruik van duurzame, moderne materialen",
+        "2": "Minimale overlast door efficiënte werkwijze",
+        "3": "Garantie op materiaal en arbeid"
+      },
+      "process": {
+        "0": { "step": "Inspectie", "description": "Camera-inspectie om de schade in kaart te brengen" },
+        "1": { "step": "Offerte", "description": "Gedetailleerde offerte met werkplan" },
+        "2": { "step": "Vervanging", "description": "Vakkundige vervanging van de leidingen" },
+        "3": { "step": "Oplevering", "description": "Eindcontrole en netjes achterlaten van de werkplek" }
+      },
+      "faq": {
+        "0": { "q": "Wanneer moeten leidingen vervangen worden?", "a": "Bij terugkerende lekkages, scheuren, ernstige corrosie of wanneer reparatie niet meer rendabel is." },
+        "1": { "q": "Moet de vloer of tuin open?", "a": "Soms is graafwerk nodig, maar we beperken dit tot het minimum. Bij sommige situaties is sleufloze techniek mogelijk." },
+        "2": { "q": "Hoe lang duurt leidingvervanging?", "a": "Een eenvoudige vervanging duurt 1 dag, grotere projecten kunnen 2-5 werkdagen duren." }
+      }
+    },
+    "wateroverlast-oplossen": {
+      "title": "Wateroverlast oplossen",
+      "description": "Wateroverlast door hevige regenval of verstopte afvoeren? Wij staan 24/7 paraat.",
+      "details": {
+        "0": { "label": "Wateroverlast verhelpen", "price": "€129,-" },
+        "1": { "label": "Spoedservice (24/7)", "price": "€179,-" }
+      },
+      "benefits": {
+        "0": "Snelle inzet bij acute wateroverlast",
+        "1": "Oplossing voor kelders, kruipruimtes en tuinen",
+        "2": "Reiniging van goten, kolken en afvoerleidingen",
+        "3": "Preventief advies om herhaling te voorkomen"
+      },
+      "process": {
+        "0": { "step": "Melding", "description": "U belt ons en wij komen zo snel mogelijk" },
+        "1": { "step": "Diagnose", "description": "We bepalen de oorzaak van de wateroverlast" },
+        "2": { "step": "Oplossing", "description": "Ontstoppen, doorspuiten of afvoeren van water" },
+        "3": { "step": "Preventie", "description": "Advies om toekomstige wateroverlast te voorkomen" }
+      },
+      "faq": {
+        "0": { "q": "Hoe snel zijn jullie er bij wateroverlast?", "a": "Bij spoed zijn wij vaak binnen 1-2 uur ter plaatse. Wij zijn 24/7 bereikbaar." },
+        "1": { "q": "Wat zijn veelvoorkomende oorzaken?", "a": "Verstopte hemelwaterafvoeren, overbelaste riolering bij hevige regenval, of defecte pompen." },
+        "2": { "q": "Kunnen jullie ook de schade herstellen?", "a": "Wij lossen de oorzaak op. Voor gevolgschade adviseren wij u contact op te nemen met uw verzekering." }
+      }
+    },
+    "regenpijp-ontstoppen": {
+      "title": "Regenpijp ontstoppen",
+      "description": "Verstopte regenpijp? Wij maken uw regenpijp snel weer vrij en voorkomen waterschade aan uw gevel.",
+      "details": {
+        "0": { "label": "Regenpijp ontstoppen", "price": "€99,-" },
+        "1": { "label": "Regenpijp + gootreiniging", "price": "€149,-" }
+      },
+      "benefits": {
+        "0": "Voorkomt vochtschade aan gevels en funderingen",
+        "1": "Snelle en vakkundige werkwijze",
+        "2": "Verwijdering van bladeren, vuil en mosgroei",
+        "3": "Preventief advies voor langdurig resultaat"
+      },
+      "process": {
+        "0": { "step": "Inspectie", "description": "We bepalen de oorzaak en locatie van de verstopping" },
+        "1": { "step": "Ontstoppen", "description": "Professioneel reinigen van de regenpijp" },
+        "2": { "step": "Doorspoelen", "description": "De regenpijp wordt grondig doorgespoeld" },
+        "3": { "step": "Controle", "description": "We controleren of het water goed afvoert" }
+      },
+      "faq": {
+        "0": { "q": "Waardoor raakt een regenpijp verstopt?", "a": "Meestal door ophoping van bladeren, mos, vuil of vogelpoep. Bomen in de buurt vergroten het risico." },
+        "1": { "q": "Hoe herken ik een verstopte regenpijp?", "a": "Water dat langs de gevel stroomt, overlopende dakgoten of plassen bij de voet van de regenpijp zijn tekenen." },
+        "2": { "q": "Hoe vaak moet een regenpijp gereinigd worden?", "a": "Wij adviseren minimaal 1x per jaar, bij voorkeur in het najaar na het bladverlies." }
+      }
+    }
+  }
+}

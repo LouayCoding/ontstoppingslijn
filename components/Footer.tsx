@@ -28,7 +28,7 @@ export default function Footer() {
                     href={`/diensten/${s.slug}`}
                     className="text-sm text-muted hover:text-foreground transition-colors duration-200"
                   >
-                    {s.title}
+                    {t(`servicesList.${s.slug}.title`)}
                   </Link>
                 </li>
               ))}
@@ -44,7 +44,7 @@ export default function Footer() {
                     href={link.href}
                     className="text-sm text-muted hover:text-foreground transition-colors duration-200"
                   >
-                    {link.label}
+                    {t(link.key)}
                   </Link>
                 </li>
               ))}

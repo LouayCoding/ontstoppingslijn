@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { FAQ_ITEMS } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
 import { useTranslation } from "@/lib/i18n-context";
+
+const FAQ_COUNT = 5;
 
 export default function FAQ() {
   const { t } = useTranslation();
@@ -18,17 +19,17 @@ export default function FAQ() {
         />
 
         <div className="bg-white rounded-2xl border border-divider/50 overflow-hidden reveal-stagger">
-          {FAQ_ITEMS.map((item, i) => (
+          {Array.from({ length: FAQ_COUNT }).map((_, i) => (
             <div
               key={i}
-              className={i < FAQ_ITEMS.length - 1 ? "border-b border-divider/50" : ""}
+              className={i < FAQ_COUNT - 1 ? "border-b border-divider/50" : ""}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between px-6 py-5 text-left group"
               >
                 <span className="text-base font-medium pr-8 group-hover:text-accent transition-colors duration-200">
-                  {item.question}
+                  {t(`faqItems.${i}.question`)}
                 </span>
                 <svg
                   className={`w-5 h-5 text-muted shrink-0 transition-transform duration-300 ${
@@ -48,7 +49,7 @@ export default function FAQ() {
               >
                 <div className="overflow-hidden">
                   <p className="text-sm text-muted leading-relaxed px-6 pb-5 max-w-[55ch]">
-                    {item.answer}
+                    {t(`faqItems.${i}.answer`)}
                   </p>
                 </div>
               </div>

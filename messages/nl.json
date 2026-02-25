@@ -3,6 +3,7 @@
     "home": "Home",
     "diensten": "Diensten",
     "werkgebied": "Werkgebied",
+    "tarieven": "Tarieven",
     "reviews": "Reviews",
     "overOns": "Over ons",
     "contact": "Contact"
@@ -149,7 +150,14 @@
     "faq": {
       "eyebrow": "Veelgestelde vragen",
       "title": "Vragen over {service}?"
-    }
+    },
+    "directRegelen": "Direct regelen",
+    "needService": "{service} nodig?",
+    "contactCta": "Neem contact op voor een afspraak. Snel, vakkundig en eerlijk geprijsd.",
+    "callButton": "Bel {phone}",
+    "appointmentButton": "Afspraak maken",
+    "otherServices": "Andere diensten",
+    "fromPrice": "Vanaf \u20ac{price}"
   },
   "stickyCta": {
     "call": "Bel nu",
@@ -187,6 +195,79 @@
         "description": "Stankoverlast in of rondom uw woning? Dit kan duiden op een kapot of verstopt riool dat direct aandacht nodig heeft.",
         "solution": "24/7 spoedservice beschikbaar →"
       }
+    }
+  },
+  "dienstenPage": {
+    "subtitle": "Professionele rioolservice en ontstoppingen door heel Nederland.",
+    "moreInfo": "Meer info"
+  },
+  "tarievenPage": {
+    "eyebrow": "Tarieven",
+    "title": "Heldere prijzen, geen verrassingen.",
+    "subtitle": "Wat u ziet is wat u betaalt. Alle prijzen zijn exclusief btw.",
+    "from": "vanaf",
+    "moreInfo": "Meer info",
+    "disclaimer": "Wij voeren onze werkzaamheden landelijk uit via ons netwerk van ervaren monteurs. De genoemde prijzen zijn exclusief btw. Spoedtarieven gelden buiten reguliere werktijden. Neem contact op voor een offerte op maat.",
+    "callButton": "Bel {phone}"
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "Neem contact met ons op.",
+    "description": "Bel ons direct of stuur een e-mail. Wij reageren altijd binnen 24 uur.",
+    "phone": "Telefoon",
+    "available": "24/7 bereikbaar",
+    "email": "E-mail",
+    "emailNote": "Reactie zo snel mogelijk",
+    "area": "Werkgebied",
+    "areaValue": "Heel Nederland",
+    "areaNote": "Landelijk netwerk van vakmensen"
+  },
+  "reviewsPage": {
+    "title": "Wat onze klanten zeggen.",
+    "ratingText": "Beoordeeld met {rating} van de 5 sterren door {count} tevreden klanten."
+  },
+  "werkgebiedPage": {
+    "title": "Actief door heel Nederland.",
+    "subtitle": "Ons landelijk netwerk van monteurs staat voor u klaar. Van Groningen tot Maastricht.",
+    "popularLocations": "Populaire locaties",
+    "mostRequested": "Meest aangevraagd.",
+    "mostRequestedSub": "Onze vakmensen zijn het meest actief in deze regio\u2019s.",
+    "surrounding": "+ omgeving",
+    "allMunicipalities": "Alle gemeenten",
+    "searchTitle": "Zoek uw gemeente.",
+    "searchSubtitle": "Wij zijn actief in meer dan 300 gemeenten door heel Nederland.",
+    "searchPlaceholder": "Zoek uw gemeente...",
+    "municipalitySingular": "gemeente",
+    "municipalityPlural": "gemeenten",
+    "found": "gevonden",
+    "notFound": "Geen gemeenten gevonden voor",
+    "notFoundNote": "Staat uw plaats er niet bij? Neem contact op \u2014 wij zijn vrijwel overal actief.",
+    "ctaEyebrow": "Direct regelen",
+    "ctaTitle": "Klaar om het te regelen?",
+    "ctaDescription": "Bel ons direct of plan online een afspraak. Wij staan voor u klaar.",
+    "callButton": "Bel {phone}",
+    "appointmentButton": "Afspraak maken"
+  },
+  "faqItems": {
+    "0": {
+      "question": "Hoe snel kunnen jullie er zijn bij een verstopt riool?",
+      "answer": "Bij spoedgevallen zijn wij vaak binnen 1-2 uur ter plaatse. Wij zijn 24/7 bereikbaar, ook in het weekend en op feestdagen."
+    },
+    "1": {
+      "question": "Wat kost het om een riool te laten ontstoppen?",
+      "answer": "Een standaard rioolontstopping begint vanaf \u20ac149,-. De exacte kosten hangen af van de ernst en locatie van de verstopping. Prijzen zijn exclusief btw."
+    },
+    "2": {
+      "question": "Zijn jullie in heel Nederland actief?",
+      "answer": "Ja, wij werken met een landelijk netwerk van ervaren monteurs. Van Groningen tot Maastricht."
+    },
+    "3": {
+      "question": "Werken jullie ook voor bedrijven en VvE\u2019s?",
+      "answer": "Ja, wij bieden rioolservice voor particulieren, bedrijven, vastgoedbeheerders, VvE\u2019s en overheidsinstellingen."
+    },
+    "4": {
+      "question": "Moet ik thuis zijn tijdens de werkzaamheden?",
+      "answer": "Ja, er moet iemand aanwezig zijn om toegang te verlenen. De meeste werkzaamheden duren 30-60 minuten."
     }
   }
 }

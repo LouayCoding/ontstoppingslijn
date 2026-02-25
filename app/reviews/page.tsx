@@ -1,6 +1,7 @@
 "use client";
 
 import { REVIEWS } from "@/lib/reviews";
+import { useTranslation } from "@/lib/i18n-context";
 
 const StarIcon = () => (
   <svg className="w-4 h-4 fill-accent" viewBox="0 0 20 20">
@@ -9,6 +10,7 @@ const StarIcon = () => (
 );
 
 export default function ReviewsPage() {
+  const { t } = useTranslation();
   const averageRating = (REVIEWS.reduce((acc, r) => acc + r.rating, 0) / REVIEWS.length).toFixed(1);
 
   return (
@@ -16,13 +18,13 @@ export default function ReviewsPage() {
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="reveal">
           <span className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
-            Reviews
+            {t("reviews.eyebrow")}
           </span>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold mb-6 max-w-[16ch]">
-            Wat onze klanten zeggen.
+            {t("reviewsPage.title")}
           </h1>
           <p className="text-muted text-base md:text-lg max-w-[45ch] mb-4">
-            Beoordeeld met {averageRating} van de 5 sterren door {REVIEWS.length} tevreden klanten.
+            {t("reviewsPage.ratingText", { rating: averageRating, count: String(REVIEWS.length) })}
           </p>
         </div>
 

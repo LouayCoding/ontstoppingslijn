@@ -1,0 +1,404 @@
+{
+  "servicesList": {
+    "riool-ontstoppen": {
+      "title": "Drain unblocking",
+      "description": "Fast and professional drain unblocking with professional equipment. 24/7 emergency service available.",
+      "details": {
+        "0": { "label": "Drain unblocking", "price": "€149" },
+        "1": { "label": "Emergency service (24/7)", "price": "€199" }
+      },
+      "benefits": {
+        "0": "Fast solution for blockages",
+        "1": "Professional high-pressure cleaning",
+        "2": "Prevents water damage and nuisance",
+        "3": "24/7 emergency service available"
+      },
+      "process": {
+        "0": { "step": "Diagnosis", "description": "We locate the blockage and determine the cause" },
+        "1": { "step": "Unblocking", "description": "Professional unblocking with high-pressure cleaning or drain snake" },
+        "2": { "step": "Flushing", "description": "The drain is thoroughly flushed" },
+        "3": { "step": "Inspection", "description": "Final check for proper flow" }
+      },
+      "faq": {
+        "0": { "q": "How quickly can you arrive for an emergency?", "a": "For emergencies, we're often on-site within 1-2 hours. We're available 24/7." },
+        "1": { "q": "What are common causes of a blocked drain?", "a": "Grease and soap buildup, hair, wet wipes, root growth and limescale are the most common causes." },
+        "2": { "q": "How long does unblocking take?", "a": "On average 30-60 minutes, depending on the severity and location of the blockage." }
+      }
+    },
+    "wc-ontstoppen": {
+      "title": "Toilet unblocking",
+      "description": "Blocked toilet? We fix it quickly and hygienically. No mess, no hassle.",
+      "details": {
+        "0": { "label": "Toilet unblocking", "price": "€99" },
+        "1": { "label": "Toilet unblocking (emergency)", "price": "€149" }
+      },
+      "benefits": {
+        "0": "Quick arrival, also on weekends",
+        "1": "Hygienic and clean approach",
+        "2": "Professional equipment for stubborn blockages",
+        "3": "Advice to prevent recurrence"
+      },
+      "process": {
+        "0": { "step": "Inspection", "description": "We determine the nature and location of the blockage" },
+        "1": { "step": "Unblocking", "description": "Expert unblocking with the right method" },
+        "2": { "step": "Cleaning", "description": "Everything is left clean and hygienic" },
+        "3": { "step": "Advice", "description": "Tips to prevent future blockages" }
+      },
+      "faq": {
+        "0": { "q": "What does toilet unblocking cost?", "a": "A standard toilet unblocking costs €99. For emergencies outside office hours, an emergency rate of €149 applies." },
+        "1": { "q": "Can you unblock all types of toilets?", "a": "Yes, we have experience with all types of toilets, including wall-hung and older models." },
+        "2": { "q": "How do I prevent a blocked toilet?", "a": "Only flush toilet paper and avoid wet wipes. Regularly flushing with hot water also helps." }
+      }
+    },
+    "afvoer-ontstoppen": {
+      "title": "Drain clearing",
+      "description": "Blocked drain in bathroom, shower or sink? We'll clear it right away.",
+      "details": {
+        "0": { "label": "Drain clearing", "price": "€89" },
+        "1": { "label": "Multiple drains", "price": "€69 per extra drain" }
+      },
+      "benefits": {
+        "0": "Solution for all types of drains",
+        "1": "Fast and clean approach",
+        "2": "Prevents water damage indoors",
+        "3": "Professional drain snake and high-pressure"
+      },
+      "process": {
+        "0": { "step": "Locate", "description": "We determine where the blockage is located" },
+        "1": { "step": "Clear", "description": "The blockage is removed with drain snake or high-pressure" },
+        "2": { "step": "Flush", "description": "The drain is thoroughly flushed" },
+        "3": { "step": "Check", "description": "We verify that the water drains properly" }
+      },
+      "faq": {
+        "0": { "q": "Which drains can you clear?", "a": "All drains: shower, sink, bathtub, washing machine drain and floor drains." },
+        "1": { "q": "How long does drain clearing take?", "a": "Usually 15-30 minutes per drain, depending on the blockage." },
+        "2": { "q": "Can I try it myself?", "a": "For minor blockages you can try a plunger. If the water won't drain, call a professional to prevent damage." }
+      }
+    },
+    "rioolreiniging": {
+      "title": "Sewer cleaning",
+      "description": "Preventive sewer cleaning and maintenance. Prevent blockages and extend the lifespan of your pipes.",
+      "details": {
+        "0": { "label": "Sewer cleaning", "price": "€195" },
+        "1": { "label": "Periodic maintenance contract", "price": "On request" }
+      },
+      "benefits": {
+        "0": "Prevents blockages and odour nuisance",
+        "1": "Removes grease, limescale and dirt buildup",
+        "2": "Extends the lifespan of your sewer system",
+        "3": "Suitable for residential and commercial"
+      },
+      "process": {
+        "0": { "step": "Inspection", "description": "We assess the condition of your sewer system" },
+        "1": { "step": "Flushing", "description": "High-pressure cleaning of the pipes" },
+        "2": { "step": "Check", "description": "We verify flow after cleaning" },
+        "3": { "step": "Report", "description": "Advice on maintenance and any points of attention" }
+      },
+      "faq": {
+        "0": { "q": "How often should a sewer be cleaned?", "a": "We recommend preventive cleaning every 2-3 years. For businesses with heavy grease discharge, more frequent cleaning may be needed." },
+        "1": { "q": "Is sewer cleaning suitable for businesses?", "a": "Yes, we clean sewers for both individuals and businesses, hospitality and property managers." },
+        "2": { "q": "Will I notice a difference after cleaning?", "a": "Yes, water drains faster and odour nuisance disappears. It also prevents future blockages." }
+      }
+    },
+    "rioolinspectie": {
+      "title": "Sewer inspection",
+      "description": "Camera inspection of your sewer system. Detecting leaks, cracks, subsidence or root growth.",
+      "details": {
+        "0": { "label": "Camera inspection", "price": "€175" },
+        "1": { "label": "Inspection + report", "price": "€225" }
+      },
+      "benefits": {
+        "0": "Exact location of problems on screen",
+        "1": "Detects cracks, root growth and subsidence",
+        "2": "HD images and comprehensive report",
+        "3": "Ideal when buying a home or for recurring problems"
+      },
+      "process": {
+        "0": { "step": "Preparation", "description": "Camera equipment is prepared and tested" },
+        "1": { "step": "Inspection", "description": "HD camera is guided through the sewer system" },
+        "2": { "step": "Analysis", "description": "Direct assessment of the condition of your pipes" },
+        "3": { "step": "Report", "description": "You receive a report with images and advice" }
+      },
+      "faq": {
+        "0": { "q": "When is a sewer inspection needed?", "a": "For recurring blockages, odour nuisance, when buying a home, or when you want to know the condition of your sewer." },
+        "1": { "q": "How long does a sewer inspection take?", "a": "On average 30-45 minutes, depending on the length and accessibility of the pipes." },
+        "2": { "q": "Will I see the images?", "a": "Yes, you receive a comprehensive report with photos and optionally video recordings." }
+      }
+    },
+    "rioolreparatie": {
+      "title": "Sewer repair",
+      "description": "Repair of damaged sewer systems. From minor leaks to complete pipe replacement.",
+      "details": {
+        "0": { "label": "Local repair", "price": "From €295" },
+        "1": { "label": "Pipe replacement", "price": "On request" }
+      },
+      "benefits": {
+        "0": "Expert repair of leaks",
+        "1": "Minimal disruption through targeted approach",
+        "2": "Replacement of damaged pipes",
+        "3": "Warranty on completed work"
+      },
+      "process": {
+        "0": { "step": "Diagnosis", "description": "Camera inspection to pinpoint the damage" },
+        "1": { "step": "Quote", "description": "Clear quote with explanation of the work" },
+        "2": { "step": "Repair", "description": "Expert repair or replacement of the pipe" },
+        "3": { "step": "Check", "description": "Final check for watertightness and flow" }
+      },
+      "faq": {
+        "0": { "q": "How do I recognise a broken sewer?", "a": "Recurring blockages, odour nuisance, wet spots in the garden or subsidence of paving can indicate sewer damage." },
+        "1": { "q": "Does the garden need to be dug up?", "a": "Not always. For minor damage, relining can sometimes be applied without excavation." },
+        "2": { "q": "How long does a sewer repair take?", "a": "A local repair usually takes 1 day. For larger jobs, this can be 2-3 days." }
+      }
+    },
+    "hemelwaterafvoer": {
+      "title": "Rainwater & Drainage",
+      "description": "Cleaning and maintenance of rain drains. Solving and preventing water damage.",
+      "details": {
+        "0": { "label": "Rainwater drain cleaning", "price": "€129" },
+        "1": { "label": "Unblocking + inspection", "price": "€179" }
+      },
+      "benefits": {
+        "0": "Prevents water damage during heavy rainfall",
+        "1": "Cleaning of gutters, drains and pipes",
+        "2": "Quick response for acute water damage",
+        "3": "Preventive maintenance saves costs"
+      },
+      "process": {
+        "0": { "step": "Inspection", "description": "We check gutters, drains and pipes" },
+        "1": { "step": "Cleaning", "description": "Flushing and cleaning rainwater drains" },
+        "2": { "step": "Unblocking", "description": "Removing leaves, dirt and root growth" },
+        "3": { "step": "Advice", "description": "Tips for preventive maintenance" }
+      },
+      "faq": {
+        "0": { "q": "How often should a rainwater drain be cleaned?", "a": "We recommend at least once a year, preferably in autumn after leaf fall." },
+        "1": { "q": "What if there's water in my basement?", "a": "Call us immediately. We offer 24/7 emergency service for acute water damage." },
+        "2": { "q": "Can root growth block a rainwater drain?", "a": "Yes, roots from trees and shrubs are a common cause. We remove them and advise on prevention." }
+      }
+    },
+    "keukenafvoer-ontstoppen": {
+      "title": "Kitchen drain unblocking",
+      "description": "Kitchen drain blocked by grease or food waste? We'll clear it quickly.",
+      "details": {
+        "0": { "label": "Kitchen drain unblocking", "price": "€89" },
+        "1": { "label": "Kitchen drain + degreasing", "price": "€139" }
+      },
+      "benefits": {
+        "0": "Specialist in grease blockages",
+        "1": "Fast and clean approach",
+        "2": "Professional degreasers and high-pressure",
+        "3": "Advice to prevent recurrence"
+      },
+      "process": {
+        "0": { "step": "Inspection", "description": "We examine the drain and identify the blockage" },
+        "1": { "step": "Unblock", "description": "Removing grease, food waste and dirt" },
+        "2": { "step": "Flush", "description": "Thorough flushing for optimal flow" },
+        "3": { "step": "Prevention", "description": "Advice on grease traps and proper use" }
+      },
+      "faq": {
+        "0": { "q": "Why does my kitchen drain keep getting blocked?", "a": "Usually due to buildup of grease, food waste and soap. A grease trap or regularly flushing with hot water helps." },
+        "1": { "q": "Can I unblock a kitchen drain myself?", "a": "For minor blockages you can try hot water with baking soda. For stubborn blockages, professional help is needed." },
+        "2": { "q": "Does a grease trap help?", "a": "Yes, especially for intensive cooking or in hospitality, a grease trap is very effective." }
+      }
+    },
+    "douche-ontstoppen": {
+      "title": "Shower unblocking",
+      "description": "Blocked shower? Hair, soap and limescale cleared quickly. Clean and hygienic approach.",
+      "details": {
+        "0": { "label": "Shower unblocking", "price": "€89" },
+        "1": { "label": "Shower + drain cleaning", "price": "€119" }
+      },
+      "benefits": {
+        "0": "Quick solution for blocked showers",
+        "1": "Removal of hair, soap and limescale residue",
+        "2": "Hygienic approach without mess",
+        "3": "Preventive advice to avoid recurrence"
+      },
+      "process": {
+        "0": { "step": "Inspection", "description": "We determine the cause of the blockage" },
+        "1": { "step": "Unblock", "description": "Professional removal of the blockage" },
+        "2": { "step": "Flush", "description": "The drain is thoroughly flushed" },
+        "3": { "step": "Advice", "description": "Tips to prevent future blockages" }
+      },
+      "faq": {
+        "0": { "q": "What causes a blocked shower?", "a": "Usually buildup of hair, soap and limescale in the drain. A hair filter can largely prevent this." },
+        "1": { "q": "How long does unblocking take?", "a": "A shower unblocking takes on average 15-30 minutes." },
+        "2": { "q": "Can I try it myself?", "a": "For minor blockages you can try a plunger or baking soda with vinegar. If it doesn't help, call a professional." }
+      }
+    },
+    "hoofdriolering-ontstoppen": {
+      "title": "Main sewer unblocking",
+      "description": "Blockage in the main sewer? We fix it with professional high-pressure equipment.",
+      "details": {
+        "0": { "label": "Main sewer unblocking", "price": "€199" },
+        "1": { "label": "Emergency service (24/7)", "price": "€249" }
+      },
+      "benefits": {
+        "0": "Powerful high-pressure cleaning for main pipes",
+        "1": "Solution for stubborn blockages",
+        "2": "Prevents water damage to multiple homes",
+        "3": "24/7 emergency service available"
+      },
+      "process": {
+        "0": { "step": "Diagnosis", "description": "Locating the blockage in the main pipe" },
+        "1": { "step": "High-pressure", "description": "Unblocking with professional high-pressure equipment" },
+        "2": { "step": "Flushing", "description": "The entire pipe is flushed through" },
+        "3": { "step": "Check", "description": "Camera inspection to verify flow" }
+      },
+      "faq": {
+        "0": { "q": "What is a main sewer?", "a": "The main sewer is the central drainage pipe that connects all drains in your home to the municipal sewer." },
+        "1": { "q": "How do I recognise a blockage in the main sewer?", "a": "Multiple drains running slowly at the same time, gurgling toilets or odour nuisance indicate a blockage in the main pipe." },
+        "2": { "q": "Is this more expensive than a regular unblocking?", "a": "The main sewer requires heavier equipment, hence the higher price. The exact cost depends on the situation." }
+      }
+    },
+    "preventieve-rioolreiniging": {
+      "title": "Preventive sewer cleaning",
+      "description": "Prevent blockages with regular sewer cleaning. Removal of grease, limescale and dirt buildup.",
+      "details": {
+        "0": { "label": "Preventive cleaning", "price": "€195" },
+        "1": { "label": "Annual contract", "price": "On request" }
+      },
+      "benefits": {
+        "0": "Prevents blockages and odour nuisance",
+        "1": "Removes grease, limescale and dirt buildup",
+        "2": "Extends the lifespan of your sewer system",
+        "3": "Suitable for residential and commercial"
+      },
+      "process": {
+        "0": { "step": "Inspection", "description": "We assess the condition of your sewer system" },
+        "1": { "step": "Flushing", "description": "High-pressure cleaning of the pipes" },
+        "2": { "step": "Check", "description": "We verify flow after cleaning" },
+        "3": { "step": "Report", "description": "Advice on maintenance and any points of attention" }
+      },
+      "faq": {
+        "0": { "q": "How often should a sewer be cleaned?", "a": "We recommend preventive cleaning every 2-3 years. For businesses with heavy grease discharge, more frequent cleaning may be needed." },
+        "1": { "q": "Is this suitable for businesses?", "a": "Yes, we clean sewers for both individuals and businesses, hospitality and property managers." },
+        "2": { "q": "Will I notice a difference after cleaning?", "a": "Yes, water drains faster and odour nuisance disappears. It also prevents future blockages." }
+      }
+    },
+    "periodiek-onderhoud": {
+      "title": "Periodic maintenance",
+      "description": "Regular maintenance of your sewer system prevents expensive repairs. Custom maintenance contracts.",
+      "details": {
+        "0": { "label": "One-time maintenance", "price": "€175" },
+        "1": { "label": "Maintenance contract (per year)", "price": "On request" }
+      },
+      "benefits": {
+        "0": "Prevents unexpected blockages",
+        "1": "Saves on expensive emergency repairs",
+        "2": "Fixed appointments at a time that suits you",
+        "3": "Suitable for homes, HOAs and commercial buildings"
+      },
+      "process": {
+        "0": { "step": "Planning", "description": "Together we create a maintenance schedule" },
+        "1": { "step": "Inspection", "description": "Check the condition of your sewer system" },
+        "2": { "step": "Cleaning", "description": "Flushing and cleaning of pipes" },
+        "3": { "step": "Report", "description": "Summary of work done and points of attention" }
+      },
+      "faq": {
+        "0": { "q": "Who is periodic maintenance suitable for?", "a": "For anyone who wants to prevent blockages: homeowners, HOAs, property managers and businesses." },
+        "1": { "q": "How often do you visit?", "a": "Standard once a year, but we adjust the frequency to your situation and needs." },
+        "2": { "q": "Can I cancel a maintenance contract?", "a": "Yes, our contracts are flexible and can be cancelled monthly." }
+      }
+    },
+    "doorspuiten-leidingen": {
+      "title": "Pipe flushing",
+      "description": "Professional high-pressure flushing of drain pipes. For optimal flow.",
+      "details": {
+        "0": { "label": "Pipe flushing", "price": "€149" },
+        "1": { "label": "Flushing + camera inspection", "price": "€225" }
+      },
+      "benefits": {
+        "0": "Powerful high-pressure cleaning up to 200 bar",
+        "1": "Removes all deposits and buildup",
+        "2": "Suitable for all types of pipes",
+        "3": "Can be used preventively and curatively"
+      },
+      "process": {
+        "0": { "step": "Preparation", "description": "Connecting high-pressure equipment" },
+        "1": { "step": "Flushing", "description": "Pipes are cleaned under high pressure" },
+        "2": { "step": "Rinsing", "description": "Thorough rinsing for clean pipes" },
+        "3": { "step": "Check", "description": "Verifying optimal flow" }
+      },
+      "faq": {
+        "0": { "q": "What's the difference from regular unblocking?", "a": "Flushing preventively cleans the entire pipe, while unblocking targets a specific blockage." },
+        "1": { "q": "Can flushing damage pipes?", "a": "No, our professionals work with the right pressure for each type of pipe. This is completely safe." },
+        "2": { "q": "How long does pipe flushing take?", "a": "On average 30-60 minutes, depending on the length and number of pipes." }
+      }
+    },
+    "leidingvervanging": {
+      "title": "Pipe replacement",
+      "description": "Damaged or outdated pipes? We replace them expertly with minimal disruption.",
+      "details": {
+        "0": { "label": "Pipe replacement (per metre)", "price": "From €395" },
+        "1": { "label": "Complete renovation", "price": "On request" }
+      },
+      "benefits": {
+        "0": "Expert replacement of old pipes",
+        "1": "Use of durable, modern materials",
+        "2": "Minimal disruption through efficient approach",
+        "3": "Warranty on materials and labour"
+      },
+      "process": {
+        "0": { "step": "Inspection", "description": "Camera inspection to map the damage" },
+        "1": { "step": "Quote", "description": "Detailed quote with work plan" },
+        "2": { "step": "Replacement", "description": "Expert replacement of the pipes" },
+        "3": { "step": "Completion", "description": "Final check and leaving the site tidy" }
+      },
+      "faq": {
+        "0": { "q": "When do pipes need to be replaced?", "a": "For recurring leaks, cracks, severe corrosion or when repair is no longer cost-effective." },
+        "1": { "q": "Does the floor or garden need to be opened up?", "a": "Sometimes excavation is needed, but we keep it to a minimum. In some situations, trenchless technology is possible." },
+        "2": { "q": "How long does pipe replacement take?", "a": "A simple replacement takes 1 day, larger projects can take 2-5 working days." }
+      }
+    },
+    "wateroverlast-oplossen": {
+      "title": "Water damage solutions",
+      "description": "Water damage from heavy rainfall or blocked drains? We're on standby 24/7.",
+      "details": {
+        "0": { "label": "Water damage resolution", "price": "€129" },
+        "1": { "label": "Emergency service (24/7)", "price": "€179" }
+      },
+      "benefits": {
+        "0": "Quick response for acute water damage",
+        "1": "Solution for basements, crawl spaces and gardens",
+        "2": "Cleaning of gutters, drains and pipes",
+        "3": "Preventive advice to avoid recurrence"
+      },
+      "process": {
+        "0": { "step": "Report", "description": "You call us and we come as soon as possible" },
+        "1": { "step": "Diagnosis", "description": "We determine the cause of the water damage" },
+        "2": { "step": "Solution", "description": "Unblocking, flushing or draining water" },
+        "3": { "step": "Prevention", "description": "Advice to prevent future water damage" }
+      },
+      "faq": {
+        "0": { "q": "How fast can you arrive for water damage?", "a": "For emergencies, we're often on-site within 1-2 hours. We're available 24/7." },
+        "1": { "q": "What are common causes?", "a": "Blocked rainwater drains, overloaded sewers during heavy rainfall, or faulty pumps." },
+        "2": { "q": "Can you also repair the damage?", "a": "We solve the cause. For consequential damage, we advise you to contact your insurance." }
+      }
+    },
+    "regenpijp-ontstoppen": {
+      "title": "Downpipe unblocking",
+      "description": "Blocked downpipe? We'll clear it quickly and prevent water damage to your facade.",
+      "details": {
+        "0": { "label": "Downpipe unblocking", "price": "€99" },
+        "1": { "label": "Downpipe + gutter cleaning", "price": "€149" }
+      },
+      "benefits": {
+        "0": "Prevents moisture damage to facades and foundations",
+        "1": "Fast and professional approach",
+        "2": "Removal of leaves, dirt and moss growth",
+        "3": "Preventive advice for lasting results"
+      },
+      "process": {
+        "0": { "step": "Inspection", "description": "We determine the cause and location of the blockage" },
+        "1": { "step": "Unblock", "description": "Professional cleaning of the downpipe" },
+        "2": { "step": "Flush", "description": "The downpipe is thoroughly flushed" },
+        "3": { "step": "Check", "description": "We verify the water drains properly" }
+      },
+      "faq": {
+        "0": { "q": "What causes a blocked downpipe?", "a": "Usually buildup of leaves, moss, dirt or bird droppings. Trees nearby increase the risk." },
+        "1": { "q": "How do I recognise a blocked downpipe?", "a": "Water running down the facade, overflowing gutters or puddles at the base of the downpipe are signs." },
+        "2": { "q": "How often should a downpipe be cleaned?", "a": "We recommend at least once a year, preferably in autumn after leaf fall." }
+      }
+    }
+  }
+}

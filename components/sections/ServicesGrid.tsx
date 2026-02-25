@@ -31,7 +31,7 @@ export default function ServicesGrid({ stad }: ServicesGridProps) {
                 <div className="relative aspect-[16/10] img-zoom">
                   <Image
                     src={service.image}
-                    alt={service.title}
+                    alt={t(`servicesList.${service.slug}.title`)}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -42,10 +42,10 @@ export default function ServicesGrid({ stad }: ServicesGridProps) {
                     {t("services.from")} €{service.price}
                   </span>
                   <h3 className="text-lg font-heading font-semibold mb-2 group-hover:text-accent transition-colors duration-300">
-                    {service.title}
+                    {t(`servicesList.${service.slug}.title`)}
                   </h3>
                   <p className="text-sm text-muted leading-relaxed">
-                    {service.description}
+                    {t(`servicesList.${service.slug}.description`)}
                   </p>
                 </div>
               </Link>

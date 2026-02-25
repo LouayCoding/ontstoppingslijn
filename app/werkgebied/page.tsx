@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeUp, staggerItem, viewportConfig } from "@/lib/animations";
 import { PHONE_HREF, PHONE_NUMBER, TOP_CITIES } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n-context";
 import { getAllSteden, getStadSlug } from "@/lib/steden";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -22,6 +23,7 @@ const item = {
 };
 
 export default function WerkgebiedPage() {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
   const allSteden = getAllSteden();
 
@@ -54,21 +56,21 @@ export default function WerkgebiedPage() {
             variants={item}
             className="inline-block text-xs uppercase tracking-[0.2em] text-accent font-medium mb-6"
           >
-            Werkgebied
+            {t("werkgebied.eyebrow")}
           </motion.span>
 
           <motion.h1
             variants={item}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-semibold max-w-[16ch] mb-6"
           >
-            Actief door heel Nederland.
+            {t("werkgebiedPage.title")}
           </motion.h1>
 
           <motion.p
             variants={item}
             className="text-white/70 text-lg md:text-xl max-w-[45ch] mb-10"
           >
-            Ons landelijk netwerk van monteurs staat voor u klaar. Van Groningen tot Maastricht.
+            {t("werkgebiedPage.subtitle")}
           </motion.p>
 
           <motion.div variants={item} className="flex flex-col sm:flex-row gap-4">
@@ -76,13 +78,13 @@ export default function WerkgebiedPage() {
               href={PHONE_HREF}
               className="inline-flex items-center justify-center bg-accent text-white font-medium text-base px-8 py-4 rounded hover:bg-accent-hover transition-colors duration-200"
             >
-              Bel {PHONE_NUMBER}
+              {t("werkgebiedPage.callButton", { phone: PHONE_NUMBER })}
             </a>
             <Link
               href="/afspraak"
               className="inline-flex items-center justify-center border border-white/20 text-white font-medium text-base px-8 py-4 rounded hover:border-white/40 transition-colors duration-200"
             >
-              Afspraak maken
+              {t("werkgebiedPage.appointmentButton")}
             </Link>
           </motion.div>
         </motion.div>
@@ -92,9 +94,9 @@ export default function WerkgebiedPage() {
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-[1200px] px-6">
           <SectionHeader
-            eyebrow="Populaire locaties"
-            title="Meest aangevraagd."
-            subtitle="Onze vakmensen zijn het meest actief in deze regio's."
+            eyebrow={t("werkgebiedPage.popularLocations")}
+            title={t("werkgebiedPage.mostRequested")}
+            subtitle={t("werkgebiedPage.mostRequestedSub")}
           />
 
           <motion.div
@@ -124,7 +126,7 @@ export default function WerkgebiedPage() {
                     <p className="text-base font-heading font-semibold group-hover:text-accent transition-colors duration-300">
                       {city}
                     </p>
-                    <p className="text-xs text-muted mt-1">+ omgeving</p>
+                    <p className="text-xs text-muted mt-1">{t("werkgebiedPage.surrounding")}</p>
                   </div>
                 </Link>
               </motion.div>
@@ -137,9 +139,9 @@ export default function WerkgebiedPage() {
       <section className="py-20 md:py-28 border-t border-divider">
         <div className="mx-auto max-w-[1200px] px-6">
           <SectionHeader
-            eyebrow="Alle gemeenten"
-            title="Zoek uw gemeente."
-            subtitle="Wij zijn actief in meer dan 300 gemeenten door heel Nederland."
+            eyebrow={t("werkgebiedPage.allMunicipalities")}
+            title={t("werkgebiedPage.searchTitle")}
+            subtitle={t("werkgebiedPage.searchSubtitle")}
           />
 
           <motion.div
@@ -151,14 +153,14 @@ export default function WerkgebiedPage() {
           >
             <input
               type="text"
-              placeholder="Zoek uw gemeente..."
+              placeholder={t("werkgebiedPage.searchPlaceholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-4 py-3 bg-surface border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200"
             />
             {searchQuery && (
               <p className="text-xs text-muted mt-3 text-center">
-                {filteredSteden.length} {filteredSteden.length === 1 ? "gemeente" : "gemeenten"} gevonden
+                {filteredSteden.length} {filteredSteden.length === 1 ? t("werkgebiedPage.municipalitySingular") : t("werkgebiedPage.municipalityPlural")} {t("werkgebiedPage.found")}
               </p>
             )}
           </motion.div>
@@ -186,7 +188,7 @@ export default function WerkgebiedPage() {
 
           {filteredSteden.length === 0 && (
             <p className="text-center text-muted py-16">
-              Geen gemeenten gevonden voor &ldquo;{searchQuery}&rdquo;
+              {t("werkgebiedPage.notFound")} &ldquo;{searchQuery}&rdquo;
             </p>
           )}
 
@@ -197,7 +199,7 @@ export default function WerkgebiedPage() {
             variants={fadeUp}
             className="text-sm text-muted text-center mt-12"
           >
-            Staat uw plaats er niet bij? Neem contact op — wij zijn vrijwel overal actief.
+            {t("werkgebiedPage.notFoundNote")}
           </motion.p>
         </div>
       </section>
@@ -219,21 +221,21 @@ export default function WerkgebiedPage() {
               variants={fadeUp}
               className="inline-flex bg-white/20 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6"
             >
-              Direct regelen
+              {t("werkgebiedPage.ctaEyebrow")}
             </motion.span>
 
             <motion.h2
               variants={fadeUp}
               className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold max-w-[16ch] mb-6 text-white"
             >
-              Klaar om het te regelen?
+              {t("werkgebiedPage.ctaTitle")}
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
               className="text-white/70 text-base md:text-lg max-w-[40ch] mb-10"
             >
-              Bel ons direct of plan online een afspraak. Wij staan voor u klaar.
+              {t("werkgebiedPage.ctaDescription")}
             </motion.p>
 
             <motion.div
@@ -244,13 +246,13 @@ export default function WerkgebiedPage() {
                 href={PHONE_HREF}
                 className="inline-flex items-center justify-center bg-white text-accent font-semibold text-base px-8 py-4 rounded-full hover:bg-white/90 transition-colors duration-200"
               >
-                Bel {PHONE_NUMBER}
+                {t("werkgebiedPage.callButton", { phone: PHONE_NUMBER })}
               </a>
               <Link
                 href="/afspraak"
                 className="inline-flex items-center justify-center border border-white/30 text-white font-medium text-base px-8 py-4 rounded-full hover:border-white/50 hover:bg-white/10 transition-colors duration-200"
               >
-                Afspraak maken
+                {t("werkgebiedPage.appointmentButton")}
               </Link>
             </motion.div>
           </motion.div>

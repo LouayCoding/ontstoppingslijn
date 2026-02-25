@@ -66,7 +66,7 @@ export default function Header() {
                 href={link.href}
                 className={`text-sm transition-colors duration-200 ${showLight ? 'text-white/70 hover:text-white' : 'text-muted hover:text-foreground'}`}
               >
-                {link.label}
+                {t(link.key)}
               </Link>
             ))}
           </nav>
@@ -121,7 +121,7 @@ export default function Header() {
                   onClick={() => setMenuOpen(false)}
                   className="text-2xl font-heading font-semibold py-3 text-foreground hover:text-accent transition-colors"
                 >
-                  {link.label}
+                  {t(link.key)}
                 </Link>
               ))}
               <div className="mt-8 pt-8 border-t border-divider flex flex-col gap-4">

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "@/lib/i18n-context";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
@@ -18,6 +19,7 @@ const item = {
 
 interface ServiceDetailClientProps {
   service: {
+    slug: string;
     title: string;
     price: string;
     description: string;
@@ -31,6 +33,8 @@ interface ServiceDetailClientProps {
 
 export default function ServiceDetailClient({ service }: ServiceDetailClientProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const { t } = useTranslation();
+  const slug = service.slug;
 
   return (
     <>
@@ -46,32 +50,32 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
             variants={item}
             className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full mb-5"
           >
-            Vanaf €{service.price}
+            {t("serviceDetail.fromPrice", { price: service.price })}
           </motion.span>
           <motion.h1
             variants={item}
             className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold mb-6"
           >
-            {service.title}
+            {t(`servicesList.${slug}.title`)}
           </motion.h1>
           <motion.p
             variants={item}
             className="text-muted text-base md:text-lg leading-relaxed mb-8 max-w-[45ch]"
           >
-            {service.description}
+            {t(`servicesList.${slug}.description`)}
           </motion.p>
           <motion.div variants={item}>
             <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-muted mb-4">
-              Tarieven
+              {t("serviceDetail.pricing")}
             </h3>
             <ul className="flex flex-col gap-3">
-              {service.details.map((d) => (
+              {service.details.map((_, i) => (
                 <li
-                  key={d.label}
+                  key={i}
                   className="flex items-baseline justify-between text-base border-b border-divider pb-3"
                 >
-                  <span className="text-muted">{d.label}</span>
-                  <span className="text-foreground font-medium">{d.price}</span>
+                  <span className="text-muted">{t(`servicesList.${slug}.details.${i}.label`)}</span>
+                  <span className="text-foreground font-medium">{t(`servicesList.${slug}.details.${i}.price`)}</span>
                 </li>
               ))}
             </ul>
@@ -93,10 +97,10 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
       {service.benefits && service.benefits.length > 0 && (
         <div className="mt-20">
           <span className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
-            Voordelen
+            {t("serviceDetail.benefits.eyebrow")}
           </span>
           <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-8">
-            Waarom {service.title.toLowerCase()}?
+            {t("serviceDetail.benefits.title", { service: t(`servicesList.${slug}.title`).toLowerCase() })}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {service.benefits.map((benefit, index) => (
@@ -104,7 +108,7 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
                 <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-0.5">
                   <svg className="w-3.5 h-3.5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                 </div>
-                <p className="text-base text-foreground">{benefit}</p>
+                <p className="text-base text-foreground">{t(`servicesList.${slug}.benefits.${index}`)}</p>
               </div>
             ))}
           </div>
@@ -115,10 +119,10 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
       {service.process && service.process.length > 0 && (
         <div className="mt-20">
           <span className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
-            Werkwijze
+            {t("serviceDetail.process.eyebrow")}
           </span>
           <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-8">
-            Hoe werkt het?
+            {t("serviceDetail.process.title")}
           </h2>
           <div className="flex flex-col gap-0 relative">
             <div className="absolute left-[23px] top-6 bottom-6 w-px bg-divider" />
@@ -131,10 +135,10 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
                 </div>
                 <div className="pt-2.5">
                   <h3 className="text-base font-heading font-semibold mb-1.5">
-                    {step.step}
+                    {t(`servicesList.${slug}.process.${index}.step`)}
                   </h3>
                   <p className="text-sm text-muted leading-relaxed">
-                    {step.description}
+                    {t(`servicesList.${slug}.process.${index}.description`)}
                   </p>
                 </div>
               </div>
@@ -147,10 +151,10 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
       {service.faq && service.faq.length > 0 && (
         <div className="mt-20">
           <span className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
-            Veelgestelde vragen
+            {t("serviceDetail.faq.eyebrow")}
           </span>
           <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-8">
-            Vragen over {service.title.toLowerCase()}?
+            {t("serviceDetail.faq.title", { service: t(`servicesList.${slug}.title`).toLowerCase() })}
           </h2>
           <div className="bg-white rounded-2xl border border-divider/50 overflow-hidden">
             {service.faq.map((faqItem, index) => (
@@ -160,7 +164,7 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
                   className="w-full flex items-center justify-between px-6 py-5 text-left group"
                 >
                   <span className="text-base font-medium pr-8 group-hover:text-accent transition-colors duration-200">
-                    {faqItem.q}
+                    {t(`servicesList.${slug}.faq.${index}.q`)}
                   </span>
                   <svg
                     className={`w-5 h-5 text-muted shrink-0 transition-transform duration-300 ${
@@ -177,7 +181,7 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
                 {openFaqIndex === index && (
                   <div className="px-6 pb-5">
                     <p className="text-sm text-muted leading-relaxed max-w-[55ch]">
-                      {faqItem.a}
+                      {t(`servicesList.${slug}.faq.${index}.a`)}
                     </p>
                   </div>
                 )}

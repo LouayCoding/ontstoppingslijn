@@ -4,12 +4,12 @@ export const EMAIL = "info@ontstoppingslijn.nl";
 export const COMPANY_NAME = "Ontstoppingslijn";
 
 export const NAV_LINKS = [
-  { label: "Diensten", href: "/diensten" },
-  { label: "Tarieven", href: "/tarieven" },
-  { label: "Werkgebied", href: "/werkgebied" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "Over ons", href: "/over-ons" },
-  { label: "Contact", href: "/contact" },
+  { key: "nav.diensten", href: "/diensten" },
+  { key: "nav.tarieven", href: "/tarieven" },
+  { key: "nav.werkgebied", href: "/werkgebied" },
+  { key: "nav.reviews", href: "/reviews" },
+  { key: "nav.overOns", href: "/over-ons" },
+  { key: "nav.contact", href: "/contact" },
 ];
 
 export const SERVICES = [
