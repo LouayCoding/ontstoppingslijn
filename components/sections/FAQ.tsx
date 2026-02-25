@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { fadeUp, viewportConfig } from "@/lib/animations";
 import { FAQ_ITEMS } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
 import { useTranslation } from "@/lib/i18n-context";
@@ -19,20 +17,10 @@ export default function FAQ() {
           title={t("faq.title")}
         />
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.06 } },
-          }}
-          className="bg-white rounded-2xl border border-divider/50 overflow-hidden"
-        >
+        <div className="bg-white rounded-2xl border border-divider/50 overflow-hidden reveal-stagger">
           {FAQ_ITEMS.map((item, i) => (
-            <motion.div
+            <div
               key={i}
-              variants={fadeUp}
               className={i < FAQ_ITEMS.length - 1 ? "border-b border-divider/50" : ""}
             >
               <button
@@ -54,23 +42,19 @@ export default function FAQ() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <AnimatePresence>
-                {openIndex === i && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as const }}
-                  >
-                    <p className="text-sm text-muted leading-relaxed px-6 pb-5 max-w-[55ch]">
-                      {item.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
+              <div
+                className="grid transition-all duration-300 ease-out"
+                style={{ gridTemplateRows: openIndex === i ? "1fr" : "0fr" }}
+              >
+                <div className="overflow-hidden">
+                  <p className="text-sm text-muted leading-relaxed px-6 pb-5 max-w-[55ch]">
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

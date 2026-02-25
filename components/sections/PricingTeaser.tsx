@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { fadeUp, staggerItem, viewportConfig } from "@/lib/animations";
 import { SERVICES, PRICING_DISCLAIMER } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -18,21 +16,11 @@ export default function PricingTeaser() {
           subtitle="Wat u ziet is wat u betaalt. Altijd vooraf duidelijkheid."
         />
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.1 } },
-          }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 reveal-stagger">
           {FEATURED.map((service, i) => (
-            <motion.div
+            <div
               key={service.slug}
-              variants={staggerItem}
-              className={`bg-white rounded-2xl p-8 border ${
+              className={`bg-white rounded-2xl p-8 border hover-lift ${
                 i === 1
                   ? "border-accent/30 ring-1 ring-accent/10"
                   : "border-divider/50"
@@ -60,27 +48,21 @@ export default function PricingTeaser() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={fadeUp}
-          className="flex flex-col items-center gap-4"
-        >
+        <div className="flex flex-col items-center gap-4 reveal">
           <Link
             href="/tarieven"
-            className="inline-flex items-center justify-center border border-divider text-foreground font-medium text-sm px-6 py-3 rounded-full hover:border-muted transition-colors duration-200"
+            className="inline-flex items-center justify-center border border-divider text-foreground font-medium text-sm px-6 py-3 rounded-full hover:border-muted transition-colors duration-200 btn-press"
           >
             Bekijk alle tarieven →
           </Link>
           <p className="text-xs text-muted/60 max-w-[60ch] text-center leading-relaxed">
             {PRICING_DISCLAIMER}
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
-export const PHONE_NUMBER = "085 060 47 02";
-export const PHONE_HREF = "tel:0850604702";
+export const PHONE_NUMBER = "085 284 32 46";
+export const PHONE_HREF = "tel:0852843246";
 export const EMAIL = "info@ontstoppingslijn.nl";
 export const COMPANY_NAME = "Ontstoppingslijn";
 
@@ -18,7 +18,7 @@ export const SERVICES = [
     title: "Riool ontstoppen",
     price: "149",
     description: "Snel en vakkundig uw riool ontstoppen met professionele apparatuur. 24/7 spoedservice beschikbaar.",
-    image: "/heropc.png",
+    image: "/riool-ontstoppen.png",
     details: [
       { label: "Riool ontstoppen", price: "€149,-" },
       { label: "Spoedservice (24/7)", price: "€199,-" },
@@ -46,7 +46,7 @@ export const SERVICES = [
     title: "WC ontstoppen",
     price: "99",
     description: "Uw toilet verstopt? Wij lossen het snel en hygiënisch op. Geen rommel, geen gedoe.",
-    image: "/camera-inspectie.png",
+    image: "/wc-ontstoppen.png",
     details: [
       { label: "WC ontstoppen", price: "€99,-" },
       { label: "WC ontstoppen (spoed)", price: "€149,-" },
@@ -74,7 +74,7 @@ export const SERVICES = [
     title: "Afvoer ontstoppen",
     price: "89",
     description: "Verstopte afvoer in badkamer, douche of wasbak? Wij maken het weer vrij.",
-    image: "/luchtkanaal-reinigen.png",
+    image: "/afvoer-ontstoppen.png",
     details: [
       { label: "Afvoer ontstoppen", price: "€89,-" },
       { label: "Meerdere afvoeren", price: "€69,- per extra afvoer" },
@@ -102,7 +102,7 @@ export const SERVICES = [
     title: "Rioolreiniging",
     price: "195",
     description: "Preventieve rioolreiniging en onderhoud. Voorkom verstoppingen en verleng de levensduur van uw leidingen.",
-    image: "/vogelnest-verwijderen.png",
+    image: "/rioolreiniging.png",
     details: [
       { label: "Rioolreiniging", price: "€195,-" },
       { label: "Periodiek onderhoudscontract", price: "Op aanvraag" },
@@ -130,7 +130,7 @@ export const SERVICES = [
     title: "Rioolinspectie",
     price: "175",
     description: "Camera-inspectie van uw riolering. Opsporen van lekkages, scheuren, verzakkingen of wortelgroei.",
-    image: "/schoorsteenkap-plaatsen.png",
+    image: "/rioolinspectie.png",
     details: [
       { label: "Camera-inspectie", price: "€175,-" },
       { label: "Inspectie + rapport", price: "€225,-" },
@@ -158,7 +158,7 @@ export const SERVICES = [
     title: "Rioolreparatie",
     price: "295",
     description: "Reparatie van beschadigde riolering. Van kleine lekkages tot volledige leidingvervanging.",
-    image: "/dak-inspectie.png",
+    image: "/rioolreparatie.png",
     details: [
       { label: "Plaatselijke reparatie", price: "Vanaf €295,-" },
       { label: "Leidingvervanging", price: "Op aanvraag" },
@@ -186,7 +186,7 @@ export const SERVICES = [
     title: "Hemelwater & Afwatering",
     price: "129",
     description: "Reiniging en onderhoud van regenafvoeren. Oplossen en voorkomen van wateroverlast.",
-    image: "/daklekkage-repareren.png",
+    image: "/hemelwater.png",
     details: [
       { label: "Hemelwaterafvoer reinigen", price: "€129,-" },
       { label: "Ontstopping + inspectie", price: "€179,-" },
@@ -214,7 +214,7 @@ export const SERVICES = [
     title: "Keukenafvoer ontstoppen",
     price: "89",
     description: "Verstopte keukenafvoer door vet of etensresten? Wij maken het snel weer vrij.",
-    image: "/creosoot-verwijderen.png",
+    image: "/keukenafvoer.png",
     details: [
       { label: "Keukenafvoer ontstoppen", price: "€89,-" },
       { label: "Keukenafvoer + vetreiniging", price: "€139,-" },
@@ -242,7 +242,7 @@ export const SERVICES = [
     title: "Douche ontstoppen",
     price: "89",
     description: "Verstopte douche? Haren, zeep en kalk maken we snel weer vrij. Schone en hygiënische werkwijze.",
-    image: "/camera-inspectie.png",
+    image: "/douche-ontstoppen.png",
     details: [
       { label: "Douche ontstoppen", price: "€89,-" },
       { label: "Douche + afvoer reiniging", price: "€119,-" },
@@ -270,7 +270,7 @@ export const SERVICES = [
     title: "Hoofdriolering ontstoppen",
     price: "199",
     description: "Verstopping in de hoofdriolering? Wij lossen het op met professionele hogedrukapparatuur.",
-    image: "/heropc.png",
+    image: "/hoofdriolering.png",
     details: [
       { label: "Hoofdriolering ontstoppen", price: "€199,-" },
       { label: "Spoedservice (24/7)", price: "€249,-" },
@@ -298,7 +298,7 @@ export const SERVICES = [
     title: "Preventieve rioolreiniging",
     price: "195",
     description: "Voorkom verstoppingen met regelmatige rioolreiniging. Verwijdering van vet, kalk en vuilophoping.",
-    image: "/vogelnest-verwijderen.png",
+    image: "/preventieve-reiniging.png",
     details: [
       { label: "Preventieve reiniging", price: "€195,-" },
       { label: "Jaarcontract", price: "Op aanvraag" },
@@ -326,7 +326,7 @@ export const SERVICES = [
     title: "Periodiek onderhoud",
     price: "175",
     description: "Regelmatig onderhoud aan uw riolering voorkomt dure reparaties. Onderhoudscontracten op maat.",
-    image: "/dak-inspectie.png",
+    image: "/periodiek-onderhoud.png",
     details: [
       { label: "Eenmalig onderhoud", price: "€175,-" },
       { label: "Onderhoudscontract (per jaar)", price: "Op aanvraag" },
@@ -354,7 +354,7 @@ export const SERVICES = [
     title: "Doorspuiten van leidingen",
     price: "149",
     description: "Professioneel doorspuiten van afvoerleidingen met hogedruk. Voor optimale doorstroming.",
-    image: "/luchtkanaal-reinigen.png",
+    image: "/doorspuiten.png",
     details: [
       { label: "Doorspuiten leidingen", price: "€149,-" },
       { label: "Doorspuiten + camera-inspectie", price: "€225,-" },
@@ -382,7 +382,7 @@ export const SERVICES = [
     title: "Vervangen van leidingen",
     price: "395",
     description: "Beschadigde of verouderde leidingen? Wij vervangen ze vakkundig met minimale overlast.",
-    image: "/schoorsteenkap-plaatsen.png",
+    image: "/leidingen-vervangen.png",
     details: [
       { label: "Leidingvervanging (per meter)", price: "Vanaf €395,-" },
       { label: "Volledige renovatie", price: "Op aanvraag" },
@@ -410,7 +410,7 @@ export const SERVICES = [
     title: "Wateroverlast oplossen",
     price: "129",
     description: "Wateroverlast door hevige regenval of verstopte afvoeren? Wij staan 24/7 paraat.",
-    image: "/daklekkage-repareren.png",
+    image: "/wateroverlast.png",
     details: [
       { label: "Wateroverlast verhelpen", price: "€129,-" },
       { label: "Spoedservice (24/7)", price: "€179,-" },
@@ -438,7 +438,7 @@ export const SERVICES = [
     title: "Regenpijp ontstoppen",
     price: "99",
     description: "Verstopte regenpijp? Wij maken uw regenpijp snel weer vrij en voorkomen waterschade aan uw gevel.",
-    image: "/daklekkage-repareren.png",
+    image: "/regenpijp.png",
     details: [
       { label: "Regenpijp ontstoppen", price: "€99,-" },
       { label: "Regenpijp + gootreiniging", price: "€149,-" },

@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { fadeUp, staggerItem, viewportConfig } from "@/lib/animations";
 import { SERVICES, PRICING_DISCLAIMER, PHONE_HREF, PHONE_NUMBER } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -16,18 +14,11 @@ export default function TarievenPage() {
           subtitle="Wat u ziet is wat u betaalt. Alle prijzen zijn exclusief btw."
         />
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
-        >
-          {SERVICES.map((service, i) => (
-            <motion.div
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 reveal-stagger">
+          {SERVICES.map((service) => (
+            <div
               key={service.slug}
-              variants={staggerItem}
-              className="bg-white rounded-2xl p-8 border border-divider/50 transition-all hover:-translate-y-1"
+              className="bg-white rounded-2xl p-8 border border-divider/50 hover-lift"
             >
               <Link href={`/diensten/${service.slug}`} className="group block">
                 <h3 className="text-lg font-heading font-semibold mb-2 group-hover:text-accent transition-colors">
@@ -49,34 +40,22 @@ export default function TarievenPage() {
                   Meer info →
                 </span>
               </Link>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.p
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={fadeUp}
-          className="text-xs text-muted/60 max-w-[65ch] mx-auto text-center leading-relaxed mb-16"
-        >
+        <p className="text-xs text-muted/60 max-w-[65ch] mx-auto text-center leading-relaxed mb-16 reveal">
           {PRICING_DISCLAIMER}
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={fadeUp}
-          className="text-center"
-        >
+        <div className="text-center reveal">
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center justify-center bg-accent text-white font-medium text-base px-8 py-4 rounded-full hover:bg-accent-hover transition-colors"
+            className="inline-flex items-center justify-center bg-accent text-white font-medium text-base px-8 py-4 rounded-full hover:bg-accent-hover transition-colors btn-press"
           >
             Bel {PHONE_NUMBER}
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

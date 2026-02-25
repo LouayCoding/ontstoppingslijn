@@ -1,25 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { PHONE_HREF, PHONE_NUMBER } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n-context";
-
-const ease = [0.25, 0.1, 0.25, 1] as const;
-
-const container = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease },
-  },
-};
 
 const TRUST_KEYS = [
   "hero.trustItems.certificate",
@@ -28,7 +11,11 @@ const TRUST_KEYS = [
   "hero.trustItems.fast",
 ];
 
-export default function Hero() {
+interface HeroProps {
+  stad?: string;
+}
+
+export default function Hero({ stad }: HeroProps) {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     naam: "",
@@ -78,18 +65,12 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100svh] flex items-center overflow-hidden">
-      <motion.div
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease }}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden hero-bg-zoom"
         style={{ backgroundImage: "url(/heromobile.png)" }}
       />
-      <motion.div
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease }}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block hero-bg-zoom"
         style={{ backgroundImage: "url(/heropc.png)" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black" />
@@ -97,59 +78,62 @@ export default function Hero() {
       <div className="relative z-0 mx-auto max-w-[1200px] w-full px-6 pt-28 pb-16 md:pt-36 md:pb-24 text-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Content */}
-          <motion.div variants={container} initial="hidden" animate="visible">
-            <motion.span
-              variants={item}
-              className="inline-flex bg-white/15 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6"
-            >
-              {t("hero.subtitle")}
-            </motion.span>
+          <div className="hero-stagger">
+            {stad && (
+              <div className="flex items-center gap-2 text-sm text-white/60 mb-6 hero-item">
+                <a href="/werkgebied" className="hover:text-accent transition-colors">Werkgebied</a>
+                <span className="text-white/30">/</span>
+                <span className="text-white">{stad}</span>
+              </div>
+            )}
 
-            <motion.h1
-              variants={item}
-              className="text-4xl sm:text-5xl md:text-6xl font-heading font-bold max-w-[14ch] mb-6 leading-[1.08]"
+            <span
+              className="inline-flex bg-white/15 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 hero-item"
             >
-              {t("hero.title")}
-            </motion.h1>
+              {stad ? `Rioolservice in ${stad}` : t("hero.subtitle")}
+            </span>
 
-            <motion.p
-              variants={item}
-              className="text-white/70 text-lg md:text-xl max-w-[40ch] mb-10"
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl font-heading font-bold max-w-[14ch] mb-6 leading-[1.08] hero-item"
             >
-              {t("hero.description")}
-            </motion.p>
+              {stad ? `Snel en vakkundig ontstopt in ${stad}.` : t("hero.title")}
+            </h1>
 
-            <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mb-10">
+            <p
+              className="text-white/70 text-lg md:text-xl max-w-[40ch] mb-10 hero-item"
+            >
+              {stad ? `Riool verstopt in ${stad}? Wij lossen het op. Ontstopping, inspectie en reparatie. 24/7 spoedservice.` : t("hero.description")}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-10 hero-item">
               <a
                 href={PHONE_HREF}
-                className="inline-flex items-center justify-center bg-accent text-white font-medium text-base px-8 py-4 rounded-full hover:bg-accent-hover transition-colors duration-200"
+                className="inline-flex items-center justify-center bg-accent text-white font-medium text-base px-8 py-4 rounded-full hover:bg-accent-hover transition-colors duration-200 btn-press"
               >
                 {t("hero.callButton", { phone: PHONE_NUMBER })}
               </a>
               <a
                 href="#afspraak-form"
-                className="inline-flex items-center justify-center border border-white/20 text-white font-medium text-base px-8 py-4 rounded-full hover:border-white/40 transition-colors duration-200"
+                className="inline-flex items-center justify-center border border-white/20 text-white font-medium text-base px-8 py-4 rounded-full hover:border-white/40 transition-colors duration-200 btn-press"
               >
                 {t("hero.appointmentButton")}
               </a>
-            </motion.div>
+            </div>
 
-            <motion.div variants={item} className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 hero-item">
               {TRUST_KEYS.map((key) => (
                 <span key={key} className="inline-flex items-center gap-2 text-sm text-white/60 bg-white/10 px-3.5 py-1.5 rounded-full">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   {t(key)}
                 </span>
               ))}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right: Form */}
-          <motion.div
+          <div
             id="afspraak-form"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease }}
+            className="hero-form"
           >
             <form
               onSubmit={handleSubmit}
@@ -292,7 +276,7 @@ export default function Hero() {
                 </p>
               )}
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

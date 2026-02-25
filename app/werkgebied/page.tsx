@@ -112,7 +112,7 @@ export default function WerkgebiedPage() {
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
-                      src="/schoorsteenkap-plaatsen.png"
+                      src="/riool-ontstoppen.png"
                       alt={`Rioolservice ${city}`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"

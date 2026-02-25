@@ -2,45 +2,38 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { staggerItem, viewportConfig } from "@/lib/animations";
 import { SERVICES } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
 import { useTranslation } from "@/lib/i18n-context";
 
-export default function ServicesGrid() {
+interface ServicesGridProps {
+  stad?: string;
+}
+
+export default function ServicesGrid({ stad }: ServicesGridProps) {
   const { t } = useTranslation();
   return (
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-[1200px] px-6">
         <SectionHeader
-          eyebrow={t("services.eyebrow")}
-          title={t("services.title")}
-          subtitle={t("services.subtitle")}
+          eyebrow={stad ? `Onze diensten in ${stad}` : t("services.eyebrow")}
+          title={stad ? "Alle rioolservices." : t("services.title")}
+          subtitle={stad ? `Van ontstoppingen tot rioolreparatie in ${stad}. Vakkundig en eerlijk geprijsd.` : t("services.subtitle")}
         />
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.08 } },
-          }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
           {SERVICES.map((service) => (
-            <motion.div key={service.slug} variants={staggerItem}>
+            <div key={service.slug}>
               <Link
                 href={`/diensten/${service.slug}`}
-                className="group block bg-white rounded-2xl border border-divider/50 overflow-hidden h-full hover:border-accent/30 hover:-translate-y-1 transition-all duration-300"
+                className="group block bg-white rounded-2xl border border-divider/50 overflow-hidden h-full hover:border-accent/30 hover-lift"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-[16/10] img-zoom">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
@@ -56,9 +49,9 @@ export default function ServicesGrid() {
                   </p>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

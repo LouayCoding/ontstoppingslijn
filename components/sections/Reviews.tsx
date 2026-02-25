@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { fadeUp, viewportConfig } from "@/lib/animations";
 import SectionHeader from "@/components/SectionHeader";
 import { REVIEWS } from "@/lib/reviews";
 import { useTranslation } from "@/lib/i18n-context";
@@ -25,21 +23,11 @@ export default function Reviews() {
           subtitle={t("reviews.subtitle")}
         />
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.08 } },
-          }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
           {featuredReviews.map((review, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={fadeUp}
-              className="bg-white rounded-2xl p-6 border border-divider/50"
+              className="bg-white rounded-2xl p-6 border border-divider/50 hover-lift"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-1">
@@ -61,24 +49,18 @@ export default function Reviews() {
                 </div>
                 <p>{review.date}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={fadeUp}
-          className="text-center mt-12"
-        >
+        <div className="text-center mt-12 reveal">
           <a
             href="/reviews"
-            className="inline-flex items-center justify-center border border-divider text-foreground font-medium text-sm px-6 py-3 rounded-full hover:border-muted transition-colors duration-200"
+            className="inline-flex items-center justify-center border border-divider text-foreground font-medium text-sm px-6 py-3 rounded-full hover:border-muted transition-colors duration-200 btn-press"
           >
             {t("reviews.viewAll")}
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

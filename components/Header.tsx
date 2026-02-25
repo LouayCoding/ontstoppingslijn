@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { PHONE_NUMBER, PHONE_HREF, COMPANY_NAME, NAV_LINKS } from "@/lib/constants";
@@ -41,13 +42,21 @@ export default function Header() {
         }`}
       />
       <div
-        className={`relative mx-auto px-6 md:px-8 transition-all duration-500 ease-out ${
-          scrolled ? "max-w-full" : "max-w-[1200px]"
-        }`}
+        className="relative mx-auto px-6 md:px-8 max-w-[1200px]"
       >
         <div className="flex items-center justify-between h-14 md:h-16">
-          <Link href="/" className={`font-heading text-lg font-bold tracking-tight transition-colors duration-300 ${showLight ? 'text-white' : 'text-foreground'}`}>
-            Ontstoppingslijn
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="Ontstoppingslijn"
+              width={40}
+              height={40}
+              className="h-8 w-8 md:h-9 md:w-9"
+              priority
+            />
+            <span className={`font-heading text-lg font-bold tracking-tight transition-colors duration-300 ${showLight ? 'text-white' : 'text-foreground'}`}>
+              Ontstoppingslijn<span className="text-accent">.nl</span>
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-7">
@@ -64,12 +73,6 @@ export default function Header() {
 
           <div className="hidden md:flex items-center gap-4">
             <LanguageSwitcher />
-            <a
-              href={PHONE_HREF}
-              className={`text-sm font-medium tracking-wide transition-colors duration-300 ${showLight ? 'text-white' : 'text-foreground'}`}
-            >
-              {PHONE_NUMBER}
-            </a>
             <Link
               href="/afspraak"
               className="text-sm font-medium bg-accent text-white px-5 py-2.5 rounded-full hover:bg-accent-hover transition-colors duration-200"

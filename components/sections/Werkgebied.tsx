@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { fadeUp, staggerItem, viewportConfig } from "@/lib/animations";
 import { TOP_CITIES } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
 import { useTranslation } from "@/lib/i18n-context";
@@ -22,35 +20,20 @@ export default function Werkgebied() {
               align="left"
             />
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              variants={{
-                hidden: {},
-                visible: { transition: { staggerChildren: 0.04 } },
-              }}
-              className="flex flex-wrap gap-2.5 mb-8"
-            >
+            <div className="flex flex-wrap gap-2.5 mb-8 reveal-stagger">
               {TOP_CITIES.map((city) => (
-                <motion.div key={city} variants={staggerItem}>
+                <div key={city}>
                   <Link
                     href={`/werkgebied/${city.toLowerCase()}`}
                     className="inline-flex bg-surface text-foreground text-sm font-medium px-4 py-2 rounded-full hover:bg-accent/10 hover:text-accent transition-colors duration-200"
                   >
                     {city}
                   </Link>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
-              variants={fadeUp}
-              className="flex flex-col gap-2"
-            >
+            <div className="flex flex-col gap-2 reveal">
               <p className="text-sm text-muted/60">
                 {t("werkgebied.surrounding")}
               </p>
@@ -60,25 +43,21 @@ export default function Werkgebied() {
               >
                 {t("werkgebied.viewAll")} →
               </Link>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
-            variants={fadeUp}
-            className="relative aspect-[4/3] overflow-hidden rounded-2xl"
+          <div
+            className="relative aspect-[4/3] overflow-hidden rounded-2xl reveal-scale"
             style={{ position: 'relative' }}
           >
             <Image
-              src="/vogelnest-verwijderen.png"
-              alt="Nederlandse daken en schoorstenen"
+              src="/riool-ontstoppen.png"
+              alt="Rioolservice door heel Nederland"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,20 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { fadeUp, viewportConfig } from "@/lib/animations";
 import { REVIEWS } from "@/lib/reviews";
-
-const ease = [0.25, 0.1, 0.25, 1] as const;
-
-const container = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
-};
 
 const StarIcon = () => (
   <svg className="w-4 h-4 fill-accent" viewBox="0 0 20 20">
@@ -28,46 +14,23 @@ export default function ReviewsPage() {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="mx-auto max-w-[1200px] px-6">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.span
-            variants={item}
-            className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5"
-          >
+        <div className="reveal">
+          <span className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
             Reviews
-          </motion.span>
-          <motion.h1
-            variants={item}
-            className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold mb-6 max-w-[16ch]"
-          >
+          </span>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold mb-6 max-w-[16ch]">
             Wat onze klanten zeggen.
-          </motion.h1>
-          <motion.p
-            variants={item}
-            className="text-muted text-base md:text-lg max-w-[45ch] mb-4"
-          >
+          </h1>
+          <p className="text-muted text-base md:text-lg max-w-[45ch] mb-4">
             Beoordeeld met {averageRating} van de 5 sterren door {REVIEWS.length} tevreden klanten.
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.06 } },
-          }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 reveal-stagger">
           {REVIEWS.map((review, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={fadeUp}
-              className="bg-white rounded-2xl border border-divider/50 p-6"
+              className="bg-white rounded-2xl border border-divider/50 p-6 hover-lift"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-1">
@@ -89,9 +52,9 @@ export default function ReviewsPage() {
                 </div>
                 <p>{review.date}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
