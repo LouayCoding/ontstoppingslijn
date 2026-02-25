@@ -29,7 +29,7 @@ export function getStadData(stad: string) {
   return {
     naam: stad,
     provincie: getProvincie(stad),
-    beschrijving: `Professionele schoorsteenveegdiensten in ${stad}`,
+    beschrijving: `Professionele rioolservice en ontstopping in ${stad}`,
   };
 }
 

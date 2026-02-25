@@ -55,8 +55,8 @@ export default function AfspraakForm() {
   };
 
   return (
-    <section className="py-20 md:py-28 border-t border-divider">
-      <div className="mx-auto max-w-[1400px] px-6">
+    <section className="py-24 md:py-32 bg-surface">
+      <div className="mx-auto max-w-[1200px] px-6">
         <SectionHeader
           eyebrow="Direct plannen"
           title="Maak een afspraak."
@@ -72,9 +72,9 @@ export default function AfspraakForm() {
             visible: { transition: { staggerChildren: 0.08 } },
           }}
           onSubmit={handleSubmit}
-          className="max-w-[600px] mx-auto"
+          className="max-w-[600px] mx-auto bg-white rounded-2xl border border-divider/50 p-6 md:p-8"
         >
-          <motion.div variants={fadeUp} className="flex flex-col gap-6">
+          <motion.div variants={fadeUp} className="flex flex-col gap-5">
             <div>
               <label htmlFor="naam" className="block text-sm text-muted mb-2">
                 Naam *
@@ -86,7 +86,7 @@ export default function AfspraakForm() {
                 required
                 value={formData.naam}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-surface border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200"
+                className="w-full px-4 py-3 bg-surface border border-divider rounded-xl text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all duration-200"
                 placeholder="Uw naam"
               />
             </div>
@@ -102,7 +102,7 @@ export default function AfspraakForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-surface border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200"
+                className="w-full px-4 py-3 bg-surface border border-divider rounded-xl text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all duration-200"
                 placeholder="uw@email.nl"
               />
             </div>
@@ -118,7 +118,7 @@ export default function AfspraakForm() {
                 required
                 value={formData.telefoon}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-surface border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200"
+                className="w-full px-4 py-3 bg-surface border border-divider rounded-xl text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all duration-200"
                 placeholder="06 12345678"
               />
             </div>
@@ -135,7 +135,7 @@ export default function AfspraakForm() {
                   required
                   value={formData.postcode}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-surface border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-surface border border-divider rounded-xl text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all duration-200"
                   placeholder="1234 AB"
                 />
               </div>
@@ -151,7 +151,7 @@ export default function AfspraakForm() {
                   required
                   value={formData.huisnummer}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-surface border border-divider rounded text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-surface border border-divider rounded-xl text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all duration-200"
                   placeholder="123"
                 />
               </div>
@@ -160,7 +160,7 @@ export default function AfspraakForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-accent text-foreground font-medium text-sm px-6 py-3 rounded hover:bg-accent-hover transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-accent text-white font-medium text-sm px-6 py-3.5 rounded-full hover:bg-accent-hover transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Verzenden..." : "Afspraak aanvragen"}
             </button>

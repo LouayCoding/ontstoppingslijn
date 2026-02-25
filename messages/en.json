@@ -8,40 +8,40 @@
     "contact": "Contact"
   },
   "hero": {
-    "subtitle": "Chimney sweeping from €39.50",
-    "title": "Professional and fast service.",
-    "description": "Chimney sweeping, inspection or repair. Same-day service available throughout the Netherlands.",
+    "subtitle": "Blocked drain? 24/7 emergency service",
+    "title": "Fast and professional unblocking.",
+    "description": "Blocked drain, toilet or sewer? We fix it. Available 24/7, throughout the Netherlands.",
     "callButton": "Call {phone}",
     "appointmentButton": "Book appointment",
     "trustItems": {
-      "certificate": "Certificate included",
-      "certified": "Certified professionals",
+      "certificate": "24/7 Emergency service",
+      "certified": "Experienced professionals",
       "transparent": "Transparent pricing",
-      "fast": "Fast service"
+      "fast": "Fast response time"
     }
   },
   "services": {
     "eyebrow": "Our services",
     "title": "What can we do for you?",
-    "subtitle": "From preventive maintenance to emergency jobs. Always professional and fairly priced.",
+    "subtitle": "From unblocking to sewer repair. Always professional and fairly priced.",
     "from": "From",
     "viewAll": "View all services"
   },
   "howItWorks": {
     "eyebrow": "How it works",
-    "title": "Done in three steps.",
+    "title": "Solved in three steps.",
     "steps": {
       "step1": {
         "title": "Call or book online",
-        "description": "Contact us by phone or book an appointment directly via our website. We respond within 24 hours."
+        "description": "Contact us by phone or book an appointment via our website. For emergencies, we're often there within 1-2 hours."
       },
       "step2": {
         "title": "We visit you",
-        "description": "An experienced professional visits you on the agreed date. No surprises, no hidden costs."
+        "description": "An experienced technician arrives with professional equipment. No surprises, no hidden costs."
       },
       "step3": {
-        "title": "Done and safe",
-        "description": "Your chimney or air duct is clean and safe again. You receive a maintenance certificate for your insurance."
+        "title": "Problem solved",
+        "description": "Your drain, sewer or pipe flows freely again. Fast, clean and tidy."
       }
     },
     "callButton": "Call {phone}"
@@ -49,26 +49,26 @@
   "werkgebied": {
     "eyebrow": "Service area",
     "title": "Active throughout the Netherlands.",
-    "subtitle": "Our network of professionals covers the entire country. From Groningen to Maastricht.",
+    "subtitle": "Our network of technicians covers the entire country. From Groningen to Maastricht.",
     "surrounding": "+ surrounding areas",
     "viewAll": "View all locations →"
   },
   "appointment": {
     "eyebrow": "Book directly",
     "title": "Make an appointment.",
-    "subtitle": "Fill in the form and we will contact you within 24 hours.",
+    "subtitle": "Fill in the form and we will contact you as soon as possible.",
     "form": {
       "name": "Name",
       "email": "Email address",
       "phone": "Phone number",
       "postalCode": "Postal code",
       "houseNumber": "House number",
-      "remark": "Remarks (optional)",
+      "remark": "Problem description (optional)",
       "submit": "Request appointment",
       "submitting": "Sending...",
-      "success": "✓ Thank you! We will contact you within 24 hours.",
+      "success": "✓ Thank you! We will contact you as soon as possible.",
       "error": "Something went wrong. Please try again or call us directly.",
-      "info": "We will contact you within 24 hours",
+      "info": "Emergency? Call us directly — we're available 24/7",
       "required": "*",
       "placeholders": {
         "name": "Your name",
@@ -76,7 +76,7 @@
         "phone": "06 12345678",
         "postalCode": "1234 AB",
         "houseNumber": "123",
-        "remark": "E.g. preferred date, special requests..."
+        "remark": "E.g. blocked drain, bad smell, water damage..."
       }
     }
   },
@@ -95,39 +95,39 @@
   },
   "finalCta": {
     "eyebrow": "Get started",
-    "title": "Ready to get it done?",
-    "description": "Call us directly or book an appointment online. We're here for you.",
+    "title": "Blocked drain? We'll fix it.",
+    "description": "Call us directly or book an appointment online. Available 24/7, throughout the Netherlands.",
     "callButton": "Call {phone}",
     "appointmentButton": "Book appointment"
   },
   "footer": {
-    "description": "Professional chimney service throughout the Netherlands. Expert, fast and fairly priced. Chimney sweeping, air duct cleaning and ventilation maintenance.",
+    "description": "Professional drain and sewer service throughout the Netherlands. Unblocking, cleaning, inspection and repair. Available 24/7 for emergencies.",
     "quickLinks": "Quick links",
     "contact": "Contact",
     "phone": "Phone",
     "email": "Email",
-    "hours": "Phone hours",
-    "hoursValue": "Mon–Fri, 08:00–18:00",
+    "hours": "Availability",
+    "hoursValue": "Available 24/7",
     "rights": "All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms"
   },
   "contact": {
     "title": "Get in touch.",
-    "subtitle": "Have questions or want to book an appointment? We're here for you.",
+    "subtitle": "Have questions or an emergency? We're available 24/7.",
     "info": {
       "phone": "Phone",
       "email": "Email",
-      "hours": "Opening hours",
-      "hoursValue": "Mon–Fri, 08:00–18:00"
+      "hours": "Availability",
+      "hoursValue": "Available 24/7"
     }
   },
   "about": {
     "eyebrow": "About us",
-    "title": "Craftsmanship throughout the Netherlands.",
-    "intro1": "We are a nationwide network of experienced chimney sweeps. Not a large company with expensive offices, but professionals who take their work seriously.",
-    "intro2": "Every chimney is different. That's why we don't work with standard solutions, but assess each situation individually. Honest advice, clear prices and work we stand behind.",
-    "intro3": "From Amsterdam to Maastricht — we ensure there's always a professional available near you. Fast, reliable and hassle-free.",
+    "title": "Sewer management throughout the Netherlands.",
+    "intro1": "Loodgieter is a nationwide network of experienced drain and sewer specialists. Not a large company with expensive offices, but professionals who take their work seriously.",
+    "intro2": "Every situation is different. That's why we don't work with standard solutions, but assess each case individually. Honest advice, clear prices and work we stand behind.",
+    "intro3": "From Amsterdam to Maastricht — we ensure there's always a technician available near you. Fast, reliable and available 24/7.",
     "stats": {
       "experience": "Years experience",
       "customers": "Happy customers",
