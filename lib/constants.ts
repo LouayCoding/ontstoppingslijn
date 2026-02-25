@@ -1,7 +1,7 @@
 export const PHONE_NUMBER = "085 060 47 02";
 export const PHONE_HREF = "tel:0850604702";
-export const EMAIL = "info@loodgieter.nl";
-export const COMPANY_NAME = "Loodgieter";
+export const EMAIL = "info@ontstoppingslijn.nl";
+export const COMPANY_NAME = "Ontstoppingslijn";
 
 export const NAV_LINKS = [
   { label: "Diensten", href: "/diensten" },

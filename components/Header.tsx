@@ -47,7 +47,7 @@ export default function Header() {
       >
         <div className="flex items-center justify-between h-14 md:h-16">
           <Link href="/" className={`font-heading text-lg font-bold tracking-tight transition-colors duration-300 ${showLight ? 'text-white' : 'text-foreground'}`}>
-            Loodgieter
+            Ontstoppingslijn
           </Link>
 
           <nav className="hidden md:flex items-center gap-7">

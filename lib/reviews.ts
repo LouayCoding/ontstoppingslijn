@@ -25,7 +25,7 @@ export const REVIEWS = [
     location: "Den Haag",
     rating: 5,
     date: "2 maanden geleden",
-    text: "WC verstopt en de loodgieter was er binnen 2 uur. Netjes en hygiënisch gewerkt. Prijs was precies zoals afgesproken.",
+    text: "WC verstopt en de monteur was er binnen 2 uur. Netjes en hygiënisch gewerkt. Prijs was precies zoals afgesproken.",
   },
   {
     name: "Henk Vermeulen",
@@ -60,7 +60,7 @@ export const REVIEWS = [
     location: "Tilburg",
     rating: 5,
     date: "4 weken geleden",
-    text: "Al twee keer gebruik gemaakt van Loodgieter. Altijd op tijd, altijd eerlijk en altijd goed werk. Vaste klant!",
+    text: "Al twee keer gebruik gemaakt van Ontstoppingslijn. Altijd op tijd, altijd eerlijk en altijd goed werk. Vaste klant!",
   },
   {
     name: "Annemarie Visser",

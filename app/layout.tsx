@@ -29,7 +29,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Loodgieter | Rioolservice & Ontstopping door heel Nederland",
+  title: "Ontstoppingslijn | Rioolservice & Ontstopping door heel Nederland",
   description:
     "Professionele rioolservice door heel Nederland. Riool ontstoppen, WC ontstoppen, rioolreiniging en inspectie. 24/7 spoedservice. Bel direct: 085 060 47 02.",
 };

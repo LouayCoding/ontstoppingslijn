@@ -37,7 +37,7 @@ export default function OverOnsPage() {
             </motion.h1>
             <motion.div variants={item} className="flex flex-col gap-6 text-muted text-base leading-relaxed">
               <p>
-                Loodgieter is een landelijk netwerk van ervaren rioolspecialisten. 
+                Ontstoppingslijn is een landelijk netwerk van ervaren rioolspecialisten. 
                 Geen groot bedrijf met dure kantoren, maar vakmensen die hun werk serieus nemen.
               </p>
               <p>
@@ -62,7 +62,7 @@ export default function OverOnsPage() {
           >
             <Image
               src="/dak-inspectie.png"
-              alt="Monteur van Loodgieter aan het werk"
+              alt="Monteur van Ontstoppingslijn aan het werk"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -80,7 +80,7 @@ export default function OverOnsPage() {
         >
           <Image
             src="/schoorsteenkap-plaatsen.png"
-            alt="Loodgieter rioolservice door heel Nederland"
+            alt="Ontstoppingslijn rioolservice door heel Nederland"
             fill
             className="object-cover"
             sizes="100vw"

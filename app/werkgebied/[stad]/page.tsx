@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: StadPageProps): Promise<Metad
   }
 
   return {
-    title: `Rioolservice ${stad} | Loodgieter`,
+    title: `Rioolservice ${stad} | Ontstoppingslijn`,
     description: `Professionele rioolservice in ${stad}. Riool ontstoppen, afvoer ontstoppen, inspectie en reparatie. 24/7 spoedservice. Direct online plannen.`,
     openGraph: {
       title: `Rioolservice ${stad}`,

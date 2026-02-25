@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) return {};
   return {
-    title: `${service.title} | Loodgieter`,
+    title: `${service.title} | Ontstoppingslijn`,
     description: service.description,
   };
 }
