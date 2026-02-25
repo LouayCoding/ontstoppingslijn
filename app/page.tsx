@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import TrustStrip from "@/components/sections/TrustStrip";
 import ServicesGrid from "@/components/sections/ServicesGrid";
+import CommonProblems from "@/components/sections/CommonProblems";
 import HowItWorks from "@/components/sections/HowItWorks";
 import PricingTeaser from "@/components/sections/PricingTeaser";
 import Werkgebied from "@/components/sections/Werkgebied";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <TrustStrip />
       <ServicesGrid />
+      <CommonProblems />
       <HowItWorks />
       <PricingTeaser />
       <Werkgebied />

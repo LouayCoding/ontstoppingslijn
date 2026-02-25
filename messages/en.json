@@ -154,5 +154,39 @@
   "stickyCta": {
     "call": "Call now",
     "appointment": "Appointment"
+  },
+  "problems": {
+    "eyebrow": "Sound familiar?",
+    "title": "Common complaints.",
+    "subtitle": "We solve these problems daily. Recognise any? Call us — we'll help right away.",
+    "callButton": "Call {phone}",
+    "appointmentButton": "Book appointment",
+    "items": {
+      "smell": {
+        "title": "Sewer smell indoors",
+        "description": "A foul smell from your drain, shower or toilet? This often indicates a blockage, dry water trap or damaged sewer.",
+        "solution": "We locate the cause and fix it right away →"
+      },
+      "flies": {
+        "title": "Drain flies",
+        "description": "Small flies around drains and toilets? Drain flies breed in buildup inside your pipes.",
+        "solution": "Professional cleaning solves this problem →"
+      },
+      "gurgling": {
+        "title": "Gurgling toilet or drain",
+        "description": "Gurgling sounds from your toilet or drain indicate air problems in the sewer, often caused by a blockage further down.",
+        "solution": "Get your sewer checked immediately →"
+      },
+      "slow": {
+        "title": "Slow draining water",
+        "description": "Shower, sink or kitchen drain getting slower? A partial blockage only gets worse over time.",
+        "solution": "Prevent worse — get it fixed now →"
+      },
+      "overflow": {
+        "title": "Sewer odour nuisance",
+        "description": "Odour nuisance in or around your property? This may indicate a broken or blocked sewer that needs immediate attention.",
+        "solution": "24/7 emergency service available →"
+      }
+    }
   }
 }

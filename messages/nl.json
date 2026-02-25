@@ -154,5 +154,39 @@
   "stickyCta": {
     "call": "Bel nu",
     "appointment": "Afspraak"
+  },
+  "problems": {
+    "eyebrow": "Herkent u dit?",
+    "title": "Veelvoorkomende klachten.",
+    "subtitle": "Deze problemen lossen wij dagelijks op. Herkenbaar? Bel ons — wij helpen direct.",
+    "callButton": "Bel {phone}",
+    "appointmentButton": "Afspraak maken",
+    "items": {
+      "smell": {
+        "title": "Rioolgeur in huis",
+        "description": "Een vieze geur uit de afvoer, douche of toilet? Dit wijst vaak op een verstopping, drooggevallen waterslot of beschadigd riool.",
+        "solution": "Wij sporen de oorzaak op en verhelpen het direct →"
+      },
+      "flies": {
+        "title": "Last van rioolvliegjes",
+        "description": "Kleine vliegjes rondom afvoeren en toiletten? Rioolvliegjes broeden in vuilophoping in uw leidingen.",
+        "solution": "Professionele reiniging verhelpt dit probleem →"
+      },
+      "gurgling": {
+        "title": "Borrelend toilet of afvoer",
+        "description": "Borrelende geluiden uit uw toilet of afvoer duiden op luchtproblemen in de riolering, vaak door een verstopping verderop.",
+        "solution": "Laat uw riolering direct controleren →"
+      },
+      "slow": {
+        "title": "Water loopt langzaam weg",
+        "description": "Douche, wasbak of gootsteen die steeds trager afvoert? Een gedeeltelijke verstopping wordt alleen maar erger.",
+        "solution": "Voorkom erger — laat het nu verhelpen →"
+      },
+      "overflow": {
+        "title": "Stankoverlast uit het riool",
+        "description": "Stankoverlast in of rondom uw woning? Dit kan duiden op een kapot of verstopt riool dat direct aandacht nodig heeft.",
+        "solution": "24/7 spoedservice beschikbaar →"
+      }
+    }
   }
 }
