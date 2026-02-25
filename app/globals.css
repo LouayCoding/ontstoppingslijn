@@ -72,10 +72,3 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* iOS: fix sticky/fixed positioning with keyboard */
-@supports (-webkit-touch-callout: none) {
-  .fixed {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-}

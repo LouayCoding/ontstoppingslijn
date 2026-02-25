@@ -14,7 +14,6 @@ export default function Header() {
   const { t } = useTranslation();
   const pathname = usePathname();
 
-  // Pages with dark hero backgrounds where header text should start white
   const hasDarkHero = pathname === "/" || pathname === "/werkgebied" || pathname.startsWith("/werkgebied/");
   const showLight = hasDarkHero && !scrolled;
 
@@ -34,7 +33,6 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* White bg layer that fades in */}
       <div
         className={`absolute inset-0 bg-white border-b transition-all duration-500 ease-out ${
           scrolled || !hasDarkHero
