@@ -85,7 +85,7 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
         <motion.div variants={item} className="relative aspect-[4/3] overflow-hidden rounded-2xl" style={{ position: 'relative' }}>
           <Image
             src={service.image}
-            alt={service.title}
+            alt={t(`servicesList.${service.slug}.title`)}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"

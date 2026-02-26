@@ -248,6 +248,114 @@
     "callButton": "Bel {phone}",
     "appointmentButton": "Afspraak maken"
   },
+  "trustStrip": {
+    "blockagesSolved": "Verstoppingen opgelost",
+    "customerRating": "Klantbeoordeling",
+    "emergencyService": "Spoedservice",
+    "professional": "Professioneel"
+  },
+  "pricingTeaser": {
+    "eyebrow": "Tarieven",
+    "title": "Heldere prijzen, geen verrassingen.",
+    "subtitle": "Wat u ziet is wat u betaalt. Altijd vooraf duidelijkheid.",
+    "from": "vanaf",
+    "viewAll": "Bekijk alle tarieven →"
+  },
+  "stad": {
+    "breadcrumbWerkgebied": "Werkgebied",
+    "heroEyebrow": "Rioolservice in {stad}",
+    "heroTitle": "Snel en vakkundig ontstopt in {stad}.",
+    "heroDescription": "Riool verstopt in {stad}? Wij lossen het op. Ontstopping, inspectie en reparatie. 24/7 spoedservice.",
+    "servicesEyebrow": "Onze diensten in {stad}",
+    "servicesTitle": "Alle rioolservices.",
+    "servicesSubtitle": "Van ontstoppingen tot rioolreparatie in {stad}. Vakkundig en eerlijk geprijsd.",
+    "howItWorksEyebrow": "Zo werkt het in {stad}",
+    "ctaEyebrow": "Rioolservice {stad}",
+    "ctaTitle": "Riool verstopt in {stad}? Wij helpen direct.",
+    "ctaDescription": "Bel ons direct of plan online een afspraak. 24/7 bereikbaar in {stad} en omgeving."
+  },
+  "alt": {
+    "werkgebiedMap": "Rioolservice door heel Nederland",
+    "aboutWorker": "Monteur van Ontstoppingslijn aan het werk",
+    "aboutNationwide": "Ontstoppingslijn rioolservice door heel Nederland"
+  },
+  "networkError": "Netwerkfout",
+  "reviewItems": {
+    "0": {
+      "text": "Riool verstopt op zondagavond, binnen een uur was de monteur er. Snel opgelost en alles netjes achtergelaten. Top service!",
+      "date": "2 weken geleden"
+    },
+    "1": {
+      "text": "Professioneel en vriendelijk. Afvoer was compleet verstopt, maar binnen een half uur stroomde alles weer. Eerlijke prijs ook.",
+      "date": "1 maand geleden"
+    },
+    "2": {
+      "text": "Camera-inspectie laten doen vanwege terugkerende verstoppingen. Wortelgroei gevonden en direct aangepakt. Zeer tevreden!",
+      "date": "3 weken geleden"
+    },
+    "3": {
+      "text": "WC verstopt en de monteur was er binnen 2 uur. Netjes en hygiënisch gewerkt. Prijs was precies zoals afgesproken.",
+      "date": "2 maanden geleden"
+    },
+    "4": {
+      "text": "Rioolreiniging voor ons bedrijfspand. Vakkundig uitgevoerd met hogedrukreiniging. Merken direct verschil. Aanrader!",
+      "date": "1 week geleden"
+    },
+    "5": {
+      "text": "Keukenafvoer zat helemaal dicht door vet. Monteur had het in 20 minuten opgelost. Gaf ook goede tips om het te voorkomen.",
+      "date": "3 weken geleden"
+    },
+    "6": {
+      "text": "Zeer vakkundig en betrouwbaar. Rioolreparatie uitgevoerd zonder de hele tuin open te breken. Knap werk!",
+      "date": "1 maand geleden"
+    },
+    "7": {
+      "text": "Wateroverlast in de kelder door verstopte hemelwaterafvoer. Snel geholpen en het probleem is definitief opgelost.",
+      "date": "2 weken geleden"
+    },
+    "8": {
+      "text": "Al twee keer gebruik gemaakt van Ontstoppingslijn. Altijd op tijd, altijd eerlijk en altijd goed werk. Vaste klant!",
+      "date": "4 weken geleden"
+    },
+    "9": {
+      "text": "Spoedgeval op zaterdag en toch snel geholpen. De monteur was vriendelijk en professioneel. Zeker een aanrader!",
+      "date": "1 week geleden"
+    }
+  },
+  "privacyPage": {
+    "eyebrow": "Juridisch",
+    "title": "Privacybeleid",
+    "whoWeAre": "Wie zijn wij",
+    "whoWeAreText": "{company} (Rioolbeheer Nederland) is verantwoordelijk voor de verwerking van persoonsgegevens zoals weergegeven in dit privacybeleid.",
+    "whatData": "Welke gegevens verzamelen wij",
+    "whatDataText": "Wij verwerken persoonsgegevens die u zelf aan ons verstrekt via het contactformulier: naam, e-mailadres, telefoonnummer en eventuele opmerkingen.",
+    "whyData": "Waarom wij gegevens verzamelen",
+    "whyDataText": "Uw gegevens worden uitsluitend gebruikt om contact met u op te nemen over uw aanvraag en om onze dienstverlening te verbeteren.",
+    "retention": "Bewaartermijn",
+    "retentionText": "Wij bewaren uw gegevens niet langer dan strikt noodzakelijk is om de doelen te realiseren waarvoor uw gegevens worden verzameld.",
+    "rights": "Uw rechten",
+    "rightsText": "U heeft het recht om uw persoonsgegevens in te zien, te corrigeren of te verwijderen. Neem hiervoor contact op via",
+    "cookies": "Cookies",
+    "cookiesText": "Deze website maakt gebruik van functionele cookies om de website goed te laten functioneren. Wij gebruiken geen tracking cookies zonder uw toestemming."
+  },
+  "termsPage": {
+    "eyebrow": "Juridisch",
+    "title": "Algemene Voorwaarden",
+    "article1": "Artikel 1 — Definities",
+    "article1Text": "In deze voorwaarden wordt verstaan onder {company}: de aanbieder van rioolservice, ontstoppingen en gerelateerde diensten.",
+    "article2": "Artikel 2 — Toepasselijkheid",
+    "article2Text": "Deze voorwaarden zijn van toepassing op alle aanbiedingen en overeenkomsten tussen {company} en de opdrachtgever.",
+    "article3": "Artikel 3 — Prijzen",
+    "article3Text": "Alle genoemde prijzen zijn exclusief btw, tenzij anders vermeld. Prijzen zijn geldig op moment van offerte.",
+    "article4": "Artikel 4 — Uitvoering",
+    "article4Text": "Wij voeren werkzaamheden uit volgens de geldende veiligheidsnormen en met professioneel materiaal. De opdrachtgever dient toegang te verschaffen tot de relevante ruimtes.",
+    "article5": "Artikel 5 — Annulering",
+    "article5Text": "Annulering is kosteloos tot 24 uur voor het afgesproken tijdstip. Bij latere annulering kunnen kosten in rekening worden gebracht.",
+    "article6": "Artikel 6 — Aansprakelijkheid",
+    "article6Text": "{company} is verzekerd voor bedrijfsaansprakelijkheid. Onze aansprakelijkheid is beperkt tot het bedrag dat door onze verzekering wordt uitgekeerd.",
+    "contact": "Contact",
+    "contactText": "Vragen over deze voorwaarden? Neem contact op via"
+  },
   "faqItems": {
     "0": {
       "question": "Hoe snel kunnen jullie er zijn bij een verstopt riool?",

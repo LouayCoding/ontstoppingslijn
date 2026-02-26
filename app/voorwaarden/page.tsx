@@ -1,85 +1,69 @@
+"use client";
+
 import { COMPANY_NAME, EMAIL } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n-context";
 
 export default function VoorwaardenPage() {
+  const { t } = useTranslation();
   return (
     <article className="pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="mx-auto max-w-[720px] px-6">
         <span className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
-          Juridisch
+          {t("termsPage.eyebrow")}
         </span>
         <h1 className="text-3xl md:text-4xl font-heading font-semibold mb-8">
-          Algemene Voorwaarden
+          {t("termsPage.title")}
         </h1>
 
         <div className="flex flex-col gap-8 text-muted text-base leading-relaxed">
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Artikel 1 — Definities
+              {t("termsPage.article1")}
             </h2>
-            <p>
-              In deze voorwaarden wordt verstaan onder {COMPANY_NAME}: de aanbieder 
-              van rioolservice, ontstoppingen en gerelateerde diensten.
-            </p>
+            <p>{t("termsPage.article1Text", { company: COMPANY_NAME })}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Artikel 2 — Toepasselijkheid
+              {t("termsPage.article2")}
             </h2>
-            <p>
-              Deze voorwaarden zijn van toepassing op alle aanbiedingen en overeenkomsten 
-              tussen {COMPANY_NAME} en de opdrachtgever.
-            </p>
+            <p>{t("termsPage.article2Text", { company: COMPANY_NAME })}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Artikel 3 — Prijzen
+              {t("termsPage.article3")}
             </h2>
-            <p>
-              Alle genoemde prijzen zijn exclusief btw, tenzij anders vermeld. 
-              Prijzen zijn geldig op moment van offerte.
-            </p>
+            <p>{t("termsPage.article3Text")}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Artikel 4 — Uitvoering
+              {t("termsPage.article4")}
             </h2>
-            <p>
-              Wij voeren werkzaamheden uit volgens de geldende veiligheidsnormen 
-              en met professioneel materiaal. De opdrachtgever dient toegang te 
-              verschaffen tot de relevante ruimtes.
-            </p>
+            <p>{t("termsPage.article4Text")}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Artikel 5 — Annulering
+              {t("termsPage.article5")}
             </h2>
-            <p>
-              Annulering is kosteloos tot 24 uur voor het afgesproken tijdstip. 
-              Bij latere annulering kunnen kosten in rekening worden gebracht.
-            </p>
+            <p>{t("termsPage.article5Text")}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Artikel 6 — Aansprakelijkheid
+              {t("termsPage.article6")}
             </h2>
-            <p>
-              {COMPANY_NAME} is verzekerd voor bedrijfsaansprakelijkheid. Onze 
-              aansprakelijkheid is beperkt tot het bedrag dat door onze verzekering 
-              wordt uitgekeerd.
-            </p>
+            <p>{t("termsPage.article6Text", { company: COMPANY_NAME })}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Contact
+              {t("termsPage.contact")}
             </h2>
             <p>
-              Vragen over deze voorwaarden? Neem contact op via{" "}
+              {t("termsPage.contactText")}{" "}
               <a href={`mailto:${EMAIL}`} className="text-accent hover:text-accent-hover transition-colors">
                 {EMAIL}
               </a>.

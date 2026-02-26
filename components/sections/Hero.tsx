@@ -52,7 +52,7 @@ export default function Hero({ stad }: HeroProps) {
       }
     } catch (err) {
       console.error("Form submission error:", err);
-      setErrorMessage(err instanceof Error ? err.message : "Netwerkfout");
+      setErrorMessage(err instanceof Error ? err.message : t("networkError"));
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -81,7 +81,7 @@ export default function Hero({ stad }: HeroProps) {
           <div className="hero-stagger">
             {stad && (
               <div className="flex items-center gap-2 text-sm text-white/60 mb-6 hero-item">
-                <a href="/werkgebied" className="hover:text-accent transition-colors">Werkgebied</a>
+                <a href="/werkgebied" className="hover:text-accent transition-colors">{t("stad.breadcrumbWerkgebied")}</a>
                 <span className="text-white/30">/</span>
                 <span className="text-white">{stad}</span>
               </div>
@@ -90,19 +90,19 @@ export default function Hero({ stad }: HeroProps) {
             <span
               className="inline-flex bg-white/15 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 hero-item"
             >
-              {stad ? `Rioolservice in ${stad}` : t("hero.subtitle")}
+              {stad ? t("stad.heroEyebrow", { stad }) : t("hero.subtitle")}
             </span>
 
             <h1
               className="text-4xl sm:text-5xl md:text-6xl font-heading font-bold max-w-[14ch] mb-6 leading-[1.08] hero-item"
             >
-              {stad ? `Snel en vakkundig ontstopt in ${stad}.` : t("hero.title")}
+              {stad ? t("stad.heroTitle", { stad }) : t("hero.title")}
             </h1>
 
             <p
               className="text-white/70 text-lg md:text-xl max-w-[40ch] mb-10 hero-item"
             >
-              {stad ? `Riool verstopt in ${stad}? Wij lossen het op. Ontstopping, inspectie en reparatie. 24/7 spoedservice.` : t("hero.description")}
+              {stad ? t("stad.heroDescription", { stad }) : t("hero.description")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10 hero-item">

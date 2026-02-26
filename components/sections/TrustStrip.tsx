@@ -1,13 +1,17 @@
 "use client";
 
-const STATS = [
-  { value: "5.000+", label: "Verstoppingen opgelost" },
-  { value: "4.9/5", label: "Klantbeoordeling" },
-  { value: "24/7", label: "Spoedservice" },
-  { value: "100%", label: "Professioneel" },
-];
+import { useTranslation } from "@/lib/i18n-context";
 
 export default function TrustStrip() {
+  const { t } = useTranslation();
+
+  const STATS = [
+    { value: "5.000+", label: t("trustStrip.blockagesSolved") },
+    { value: "4.9/5", label: t("trustStrip.customerRating") },
+    { value: "24/7", label: t("trustStrip.emergencyService") },
+    { value: "100%", label: t("trustStrip.professional") },
+  ];
+
   return (
     <section className="bg-surface py-16 md:py-20">
       <div className="mx-auto max-w-[1200px] px-6">

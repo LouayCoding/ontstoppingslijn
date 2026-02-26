@@ -30,7 +30,7 @@ export default function OverOnsPage() {
           >
             <Image
               src="/riool-ontstoppen.png"
-              alt="Monteur van Ontstoppingslijn aan het werk"
+              alt={t("alt.aboutWorker")}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -44,7 +44,7 @@ export default function OverOnsPage() {
         >
           <Image
             src="/rioolreiniging.png"
-            alt="Ontstoppingslijn rioolservice door heel Nederland"
+            alt={t("alt.aboutNationwide")}
             fill
             className="object-cover"
             sizes="100vw"

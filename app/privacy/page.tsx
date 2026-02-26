@@ -1,64 +1,55 @@
+"use client";
+
 import { COMPANY_NAME, EMAIL } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n-context";
 
 export default function PrivacyPage() {
+  const { t } = useTranslation();
   return (
     <article className="pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="mx-auto max-w-[720px] px-6">
         <span className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
-          Juridisch
+          {t("privacyPage.eyebrow")}
         </span>
         <h1 className="text-3xl md:text-4xl font-heading font-semibold mb-8">
-          Privacybeleid
+          {t("privacyPage.title")}
         </h1>
 
         <div className="flex flex-col gap-8 text-muted text-base leading-relaxed">
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Wie zijn wij
+              {t("privacyPage.whoWeAre")}
             </h2>
-            <p>
-              {COMPANY_NAME} (Rioolbeheer Nederland) is verantwoordelijk voor de verwerking van persoonsgegevens 
-              zoals weergegeven in dit privacybeleid.
-            </p>
+            <p>{t("privacyPage.whoWeAreText", { company: COMPANY_NAME })}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Welke gegevens verzamelen wij
+              {t("privacyPage.whatData")}
             </h2>
-            <p>
-              Wij verwerken persoonsgegevens die u zelf aan ons verstrekt via het 
-              contactformulier: naam, e-mailadres, telefoonnummer en eventuele opmerkingen.
-            </p>
+            <p>{t("privacyPage.whatDataText")}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Waarom wij gegevens verzamelen
+              {t("privacyPage.whyData")}
             </h2>
-            <p>
-              Uw gegevens worden uitsluitend gebruikt om contact met u op te nemen 
-              over uw aanvraag en om onze dienstverlening te verbeteren.
-            </p>
+            <p>{t("privacyPage.whyDataText")}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Bewaartermijn
+              {t("privacyPage.retention")}
             </h2>
-            <p>
-              Wij bewaren uw gegevens niet langer dan strikt noodzakelijk is om de 
-              doelen te realiseren waarvoor uw gegevens worden verzameld.
-            </p>
+            <p>{t("privacyPage.retentionText")}</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Uw rechten
+              {t("privacyPage.rights")}
             </h2>
             <p>
-              U heeft het recht om uw persoonsgegevens in te zien, te corrigeren of 
-              te verwijderen. Neem hiervoor contact op via{" "}
+              {t("privacyPage.rightsText")}{" "}
               <a href={`mailto:${EMAIL}`} className="text-accent hover:text-accent-hover transition-colors">
                 {EMAIL}
               </a>.
@@ -67,12 +58,9 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-lg font-heading font-semibold text-foreground mb-3">
-              Cookies
+              {t("privacyPage.cookies")}
             </h2>
-            <p>
-              Deze website maakt gebruik van functionele cookies om de website goed 
-              te laten functioneren. Wij gebruiken geen tracking cookies zonder uw toestemming.
-            </p>
+            <p>{t("privacyPage.cookiesText")}</p>
           </section>
         </div>
       </div>

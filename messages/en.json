@@ -248,6 +248,114 @@
     "callButton": "Call {phone}",
     "appointmentButton": "Book appointment"
   },
+  "trustStrip": {
+    "blockagesSolved": "Blockages solved",
+    "customerRating": "Customer rating",
+    "emergencyService": "Emergency service",
+    "professional": "Professional"
+  },
+  "pricingTeaser": {
+    "eyebrow": "Pricing",
+    "title": "Clear prices, no surprises.",
+    "subtitle": "What you see is what you pay. Always upfront clarity.",
+    "from": "from",
+    "viewAll": "View all pricing →"
+  },
+  "stad": {
+    "breadcrumbWerkgebied": "Service area",
+    "heroEyebrow": "Drain service in {stad}",
+    "heroTitle": "Fast and professional unblocking in {stad}.",
+    "heroDescription": "Blocked drain in {stad}? We fix it. Unblocking, inspection and repair. 24/7 emergency service.",
+    "servicesEyebrow": "Our services in {stad}",
+    "servicesTitle": "All drain services.",
+    "servicesSubtitle": "From unblocking to sewer repair in {stad}. Professional and fairly priced.",
+    "howItWorksEyebrow": "How it works in {stad}",
+    "ctaEyebrow": "Drain service {stad}",
+    "ctaTitle": "Blocked drain in {stad}? We help immediately.",
+    "ctaDescription": "Call us directly or book an appointment online. Available 24/7 in {stad} and surrounding areas."
+  },
+  "alt": {
+    "werkgebiedMap": "Drain service throughout the Netherlands",
+    "aboutWorker": "Ontstoppingslijn technician at work",
+    "aboutNationwide": "Ontstoppingslijn drain service throughout the Netherlands"
+  },
+  "networkError": "Network error",
+  "reviewItems": {
+    "0": {
+      "text": "Drain blocked on Sunday evening, the technician was there within an hour. Quickly resolved and everything left neat. Top service!",
+      "date": "2 weeks ago"
+    },
+    "1": {
+      "text": "Professional and friendly. Drain was completely blocked, but within half an hour everything was flowing again. Fair price too.",
+      "date": "1 month ago"
+    },
+    "2": {
+      "text": "Had a camera inspection done due to recurring blockages. Root growth found and dealt with immediately. Very satisfied!",
+      "date": "3 weeks ago"
+    },
+    "3": {
+      "text": "Toilet blocked and the technician was there within 2 hours. Worked neatly and hygienically. Price was exactly as agreed.",
+      "date": "2 months ago"
+    },
+    "4": {
+      "text": "Sewer cleaning for our business premises. Professionally executed with high-pressure cleaning. Noticed the difference immediately. Recommended!",
+      "date": "1 week ago"
+    },
+    "5": {
+      "text": "Kitchen drain was completely clogged with grease. Technician had it sorted in 20 minutes. Also gave good prevention tips.",
+      "date": "3 weeks ago"
+    },
+    "6": {
+      "text": "Very professional and reliable. Sewer repair carried out without digging up the entire garden. Great work!",
+      "date": "1 month ago"
+    },
+    "7": {
+      "text": "Water damage in the basement from a blocked rainwater drain. Quickly helped and the problem is permanently resolved.",
+      "date": "2 weeks ago"
+    },
+    "8": {
+      "text": "Used Ontstoppingslijn twice now. Always on time, always honest and always good work. Regular customer!",
+      "date": "4 weeks ago"
+    },
+    "9": {
+      "text": "Emergency on Saturday and still helped quickly. The technician was friendly and professional. Definitely recommended!",
+      "date": "1 week ago"
+    }
+  },
+  "privacyPage": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy",
+    "whoWeAre": "Who we are",
+    "whoWeAreText": "{company} (Rioolbeheer Nederland) is responsible for the processing of personal data as described in this privacy policy.",
+    "whatData": "What data we collect",
+    "whatDataText": "We process personal data that you provide to us through the contact form: name, email address, phone number and any comments.",
+    "whyData": "Why we collect data",
+    "whyDataText": "Your data is used exclusively to contact you about your enquiry and to improve our services.",
+    "retention": "Retention period",
+    "retentionText": "We do not retain your data longer than strictly necessary to achieve the purposes for which your data is collected.",
+    "rights": "Your rights",
+    "rightsText": "You have the right to view, correct or delete your personal data. Please contact us at",
+    "cookies": "Cookies",
+    "cookiesText": "This website uses functional cookies to ensure the website works properly. We do not use tracking cookies without your consent."
+  },
+  "termsPage": {
+    "eyebrow": "Legal",
+    "title": "Terms and Conditions",
+    "article1": "Article 1 — Definitions",
+    "article1Text": "In these terms, {company} refers to the provider of drain services, unblocking and related services.",
+    "article2": "Article 2 — Applicability",
+    "article2Text": "These terms apply to all offers and agreements between {company} and the client.",
+    "article3": "Article 3 — Pricing",
+    "article3Text": "All prices quoted exclude VAT unless otherwise stated. Prices are valid at the time of quotation.",
+    "article4": "Article 4 — Execution",
+    "article4Text": "We carry out work in accordance with applicable safety standards and with professional equipment. The client must provide access to the relevant areas.",
+    "article5": "Article 5 — Cancellation",
+    "article5Text": "Cancellation is free of charge up to 24 hours before the agreed time. Later cancellations may incur charges.",
+    "article6": "Article 6 — Liability",
+    "article6Text": "{company} is insured for business liability. Our liability is limited to the amount paid out by our insurance.",
+    "contact": "Contact",
+    "contactText": "Questions about these terms? Contact us at"
+  },
   "faqItems": {
     "0": {
       "question": "How quickly can you arrive for a blocked drain?",

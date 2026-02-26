@@ -17,7 +17,7 @@ export default function HowItWorks({ stad }: HowItWorksProps) {
       <div className="mx-auto max-w-[700px] px-6">
         <div className="text-center mb-14 md:mb-20 reveal">
           <span className="inline-flex bg-accent/10 text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
-            {stad ? `Zo werkt het in ${stad}` : t("howItWorks.eyebrow")}
+            {stad ? t("stad.howItWorksEyebrow", { stad }) : t("howItWorks.eyebrow")}
           </span>
           <h2 className="text-3xl md:text-4xl font-heading font-semibold">
             {t("howItWorks.title")}

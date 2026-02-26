@@ -54,7 +54,7 @@ export default function AfspraakPage() {
       }
     } catch (err) {
       console.error("Form submission error:", err);
-      setErrorMessage(err instanceof Error ? err.message : "Netwerkfout");
+      setErrorMessage(err instanceof Error ? err.message : t("networkError"));
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);

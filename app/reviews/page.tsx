@@ -44,7 +44,7 @@ export default function ReviewsPage() {
               </div>
               
               <p className="text-sm text-foreground leading-relaxed mb-5">
-                &ldquo;{review.text}&rdquo;
+                &ldquo;{t(`reviewItems.${index}.text`)}&rdquo;
               </p>
               
               <div className="flex items-center justify-between text-xs text-muted pt-4 border-t border-divider/50">
@@ -52,7 +52,7 @@ export default function ReviewsPage() {
                   <p className="font-medium text-foreground">{review.name}</p>
                   <p>{review.location}</p>
                 </div>
-                <p>{review.date}</p>
+                <p>{t(`reviewItems.${index}.date`)}</p>
               </div>
             </div>
           ))}

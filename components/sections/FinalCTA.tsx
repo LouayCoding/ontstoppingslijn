@@ -15,15 +15,15 @@ export default function FinalCTA({ stad }: FinalCTAProps) {
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="bg-gradient-to-br from-accent to-accent-hover rounded-3xl px-8 py-16 md:px-16 md:py-20 flex flex-col items-center text-center reveal-scale">
           <span className="inline-flex bg-white/20 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6">
-            {stad ? `Rioolservice ${stad}` : t("finalCta.eyebrow")}
+            {stad ? t("stad.ctaEyebrow", { stad }) : t("finalCta.eyebrow")}
           </span>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold max-w-[16ch] mb-6 text-white">
-            {stad ? `Riool verstopt in ${stad}? Wij helpen direct.` : t("finalCta.title")}
+            {stad ? t("stad.ctaTitle", { stad }) : t("finalCta.title")}
           </h2>
 
           <p className="text-white/70 text-base md:text-lg max-w-[40ch] mb-10">
-            {stad ? `Bel ons direct of plan online een afspraak. 24/7 bereikbaar in ${stad} en omgeving.` : t("finalCta.description")}
+            {stad ? t("stad.ctaDescription", { stad }) : t("finalCta.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

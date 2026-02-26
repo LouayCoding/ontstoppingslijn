@@ -52,7 +52,7 @@ export default function Werkgebied() {
           >
             <Image
               src="/riool-ontstoppen.png"
-              alt="Rioolservice door heel Nederland"
+              alt={t("alt.werkgebiedMap")}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"

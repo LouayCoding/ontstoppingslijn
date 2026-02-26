@@ -16,9 +16,9 @@ export default function ServicesGrid({ stad }: ServicesGridProps) {
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-[1200px] px-6">
         <SectionHeader
-          eyebrow={stad ? `Onze diensten in ${stad}` : t("services.eyebrow")}
-          title={stad ? "Alle rioolservices." : t("services.title")}
-          subtitle={stad ? `Van ontstoppingen tot rioolreparatie in ${stad}. Vakkundig en eerlijk geprijsd.` : t("services.subtitle")}
+          eyebrow={stad ? t("stad.servicesEyebrow", { stad }) : t("services.eyebrow")}
+          title={stad ? t("stad.servicesTitle") : t("services.title")}
+          subtitle={stad ? t("stad.servicesSubtitle", { stad }) : t("services.subtitle")}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
